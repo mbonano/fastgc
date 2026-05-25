@@ -1,0 +1,43 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: FastGCYour plain-English guide to the U.S. Green Card
+      - generic [ref=e5]:
+        - generic [ref=e6]: Language
+        - combobox "Language" [ref=e7] [cursor=pointer]:
+          - option "English" [selected]
+          - option "Español"
+          - option "Русский"
+  - main [ref=e8]:
+    - generic [ref=e9]:
+      - heading "What is a Green Card?" [level=1] [ref=e10]
+      - paragraph [ref=e11]: A green card lets you live and work in the United States permanently. To apply, you must qualify under at least one of the categories below. Find the one that fits your situation to learn how to apply and how to speed up the process.
+    - button "Expand all" [ref=e13]
+    - generic [ref=e14]:
+      - button "Green Card through Family" [ref=e16]:
+        - generic [ref=e17]: Green Card through Family
+        - img [ref=e19]
+      - button "Green Card through Employment" [ref=e22]:
+        - generic [ref=e23]: Green Card through Employment
+        - img [ref=e25]
+      - button "Green Card as a Special Immigrant" [ref=e28]:
+        - generic [ref=e29]: Green Card as a Special Immigrant
+        - img [ref=e31]
+      - button "Green Card through Refugee or Asylee Status" [ref=e34]:
+        - generic [ref=e35]: Green Card through Refugee or Asylee Status
+        - img [ref=e37]
+      - button "Green Card for Human Trafficking and Crime Victims" [ref=e40]:
+        - generic [ref=e41]: Green Card for Human Trafficking and Crime Victims
+        - img [ref=e43]
+      - button "Green Card for Victims of Abuse" [ref=e46]:
+        - generic [ref=e47]: Green Card for Victims of Abuse
+        - img [ref=e49]
+      - button "Green Card through Other Categories" [ref=e52]:
+        - generic [ref=e53]: Green Card through Other Categories
+        - img [ref=e55]
+      - button "Green Card through Registry" [ref=e58]:
+        - generic [ref=e59]: Green Card through Registry
+        - img [ref=e61]
+    - generic [ref=e63]:
+      - paragraph [ref=e64]: This information is based on official USCIS data and is for general information only — not legal advice. For your specific situation, consult a licensed immigration attorney.
+      - paragraph [ref=e65]: "Source: USCIS Green Card Eligibility Categories"

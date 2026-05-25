@@ -1,0 +1,288 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - link "Skip to main content" [ref=e5] [cursor=pointer]:
+        - /url: "#main-content"
+      - link "Countdown to America's 250th Anniversary" [ref=e11] [cursor=pointer]:
+        - /url: https://www.dhs.gov/250
+        - generic [ref=e12]:
+          - img "America 250 logo" [ref=e13]
+          - generic:
+            - generic: Countdown to America's 250th Anniversary!
+          - generic [ref=e14]:
+            - generic [ref=e15]:
+              - generic [ref=e17]: "39"
+              - generic [ref=e19]: Days
+            - generic [ref=e20]:
+              - generic [ref=e22]: "5"
+              - generic [ref=e24]: Hours
+            - generic [ref=e25]:
+              - generic [ref=e27]: "23"
+              - generic [ref=e29]: Minutes
+      - generic [ref=e31]:
+        - generic [ref=e35]:
+          - img "U.S. flag" [ref=e37]
+          - generic [ref=e38]:
+            - text: An official website of the United States government
+            - link "Here's how you know " [ref=e39] [cursor=pointer]:
+              - /url: "#"
+        - link "Español" [ref=e44] [cursor=pointer]:
+          - /url: /es/residencia-permanente-tarjeta-verde/categorias-de-elegibilidad-a-la-residencia-permanente
+      - generic [ref=e46]:
+        - generic [ref=e48]:
+          - link "U.S. Department of Homeland Security Seal, U.S. Citizenship and Immigration Services" [ref=e51] [cursor=pointer]:
+            - /url: /
+            - img "U.S. Department of Homeland Security Seal, U.S. Citizenship and Immigration Services" [ref=e52]
+          - generic [ref=e55]:
+            - generic [ref=e59]:
+              - textbox "search" [ref=e61]:
+                - /placeholder: Search our site
+              - button "Search" [ref=e62] [cursor=pointer]:
+                - img [ref=e63]: 
+            - button "Sign In" [ref=e67] [cursor=pointer]:
+              - generic [ref=e69]:
+                - text: Sign In
+                - img [ref=e70]: 
+        - navigation "Primary navigation" [ref=e72]:
+          - list [ref=e74]:
+            - listitem [ref=e75]:
+              - button "Topics" [ref=e76] [cursor=pointer]:
+                - generic [ref=e77]: Topics
+            - listitem [ref=e78]:
+              - button "Forms" [ref=e79] [cursor=pointer]:
+                - generic [ref=e80]: Forms
+            - listitem [ref=e81]:
+              - button "Newsroom" [ref=e82] [cursor=pointer]:
+                - generic [ref=e83]: Newsroom
+            - listitem [ref=e84]:
+              - button "Citizenship" [ref=e85] [cursor=pointer]:
+                - generic [ref=e86]: Citizenship
+            - listitem [ref=e87]:
+              - button "Green Card" [ref=e88] [cursor=pointer]:
+                - generic [ref=e89]: Green Card
+            - listitem [ref=e90]:
+              - button "Laws" [ref=e91] [cursor=pointer]:
+                - generic [ref=e92]: Laws
+            - listitem [ref=e93]:
+              - button "Tools" [ref=e94] [cursor=pointer]:
+                - generic [ref=e95]: Tools
+    - generic [ref=e98]:
+      - complementary [ref=e99]:
+        - navigation "Main navigation" [ref=e101]:
+          - generic [ref=e102]: Main navigation
+          - link "Skip to main content" [ref=e103] [cursor=pointer]:
+            - /url: "#main-content"
+          - list [ref=e104]:
+            - listitem [ref=e105]:
+              - generic [ref=e106]:
+                - link "Green Card" [ref=e108] [cursor=pointer]:
+                  - /url: /green-card
+                - generic: 
+              - list [ref=e109]:
+                - listitem [ref=e110]:
+                  - generic [ref=e111]:
+                    - generic [ref=e112]:
+                      - link "Green Card Eligibility" [ref=e114] [cursor=pointer]:
+                        - /url: /green-card/green-card-eligibility-categories
+                      - button "Toggle menu for Green Card Eligibility" [expanded] [ref=e116] [cursor=pointer]:
+                        - img [ref=e117]: 
+                    - list [ref=e119]:
+                      - listitem [ref=e120]:
+                        - link "Green Card for Employment-Based Immigrants" [ref=e123] [cursor=pointer]:
+                          - /url: /green-card/green-card-eligibility/green-card-for-employment-based-immigrants
+                      - listitem [ref=e124]:
+                        - link "Green Card for Family Preference Immigrants" [ref=e127] [cursor=pointer]:
+                          - /url: /green-card/green-card-eligibility/green-card-for-family-preference-immigrants
+                      - listitem [ref=e128]:
+                        - link "Green Card for an Immediate Relative of a U.S. Citizen" [ref=e131] [cursor=pointer]:
+                          - /url: /green-card/green-card-eligibility/green-card-for-immediate-relatives-of-us-citizen
+                - listitem [ref=e132]:
+                  - link "How to Apply for a Green Card" [ref=e135] [cursor=pointer]:
+                    - /url: /green-card/how-to-apply-for-a-green-card
+                - listitem [ref=e136]:
+                  - generic [ref=e137]:
+                    - link "Green Card Processes and Procedures" [ref=e139] [cursor=pointer]:
+                      - /url: /green-card/green-card-processes-and-procedures
+                    - button "Toggle menu for Green Card Processes and Procedures" [ref=e141] [cursor=pointer]:
+                      - img [ref=e142]: 
+                  - text: 
+                - listitem [ref=e144]:
+                  - link "While Your Green Card Application Is Pending with USCIS" [ref=e147] [cursor=pointer]:
+                    - /url: /green-card/while-your-green-card-application-is-pending-with-uscis
+                - listitem [ref=e148]:
+                  - link "After Receiving a Decision" [ref=e151] [cursor=pointer]:
+                    - /url: /green-card/after-receiving-a-decision
+                - listitem [ref=e152]:
+                  - generic [ref=e153]:
+                    - link "After We Grant Your Green Card" [ref=e155] [cursor=pointer]:
+                      - /url: /green-card/after-we-grant-your-green-card
+                    - button "Toggle menu for After We Grant Your Green Card" [ref=e157] [cursor=pointer]:
+                      - img [ref=e158]: 
+      - generic [ref=e160]:
+        - navigation "Breadcrumb" [ref=e163]:
+          - generic [ref=e164]: Breadcrumb
+          - list [ref=e165]:
+            - listitem [ref=e166]:
+              - link "Home" [ref=e167] [cursor=pointer]:
+                - /url: /
+              - generic [ref=e168]: ">"
+            - listitem [ref=e169]:
+              - link "Green Card" [ref=e170] [cursor=pointer]:
+                - /url: /green-card
+              - generic [ref=e171]: ">"
+            - listitem [ref=e172]: Green Card Eligibility Categories
+        - main [ref=e173]:
+          - article [ref=e177]:
+            - generic [ref=e178]:
+              - heading "Green Card Eligibility Categories" [level=1] [ref=e179]
+              - generic [ref=e181]:
+                - paragraph [ref=e182]: To apply for a Green Card, you must be eligible under one of the categories listed below. Once you find the category that may fit your situation, click on the link provided to get information on eligibility requirements, how to apply, and whether your family members can also apply with you.
+                - generic [ref=e183]:
+                  - link "Close All" [ref=e184] [cursor=pointer]:
+                    - /url: "#"
+                    - img [ref=e185]: 
+                    - text: Close All
+                  - link "Open All" [ref=e187] [cursor=pointer]:
+                    - /url: "#"
+                    - img [ref=e188]: 
+                    - text: Open All
+                - generic [ref=e190]:
+                  - button "Green Card through Family " [ref=e191] [cursor=pointer]
+                  - button "Green Card through Employment " [ref=e192] [cursor=pointer]
+                  - button "Green Card as a Special Immigrant " [ref=e193] [cursor=pointer]
+                  - button "Green Card through Refugee or Asylee Status " [ref=e194] [cursor=pointer]
+                  - button "Green Card for Human Trafficking and Crime Victims " [ref=e195] [cursor=pointer]
+                  - button "Green Card for Victims of Abuse " [ref=e196] [cursor=pointer]
+                  - button "Green Card through Other Categories " [ref=e197] [cursor=pointer]
+                  - button "Green Card through Registry " [ref=e198] [cursor=pointer]
+                - generic [ref=e199]:
+                  - link "Close All" [ref=e200] [cursor=pointer]:
+                    - /url: "#"
+                    - img [ref=e201]: 
+                    - text: Close All
+                  - link "Open All" [ref=e203] [cursor=pointer]:
+                    - /url: "#"
+                    - img [ref=e204]: 
+                    - text: Open All
+            - generic [ref=e206]:
+              - generic [ref=e207]: "Last Reviewed/Updated:"
+              - time [ref=e209]: 07/08/2025
+          - generic [ref=e213]:
+            - group "Was this page helpful?" [ref=e214]:
+              - generic [ref=e215]: Was this page helpful?
+              - generic [ref=e217]:
+                - generic [ref=e218]:
+                  - radio "Yes" [ref=e219]
+                  - generic [ref=e220] [cursor=pointer]: "Yes"
+                - generic [ref=e221]:
+                  - radio "No" [ref=e222]
+                  - generic [ref=e223] [cursor=pointer]: "No"
+            - text: 
+            - button "Submit" [disabled] [ref=e224]
+          - text: 
+    - contentinfo [ref=e227]:
+      - link "Return to top" [ref=e229] [cursor=pointer]:
+        - /url: "#"
+      - navigation "Footer navigation" [ref=e234]:
+        - list [ref=e235]:
+          - listitem [ref=e236]:
+            - link "Topics" [ref=e237] [cursor=pointer]:
+              - /url: /topics
+          - listitem [ref=e238]:
+            - link "Forms" [ref=e239] [cursor=pointer]:
+              - /url: /forms/forms
+          - listitem [ref=e240]:
+            - link "Newsroom" [ref=e241] [cursor=pointer]:
+              - /url: /newsroom
+          - listitem [ref=e242]:
+            - link "Citizenship" [ref=e243] [cursor=pointer]:
+              - /url: /citizenship
+          - listitem [ref=e244]:
+            - link "Green Card" [ref=e245] [cursor=pointer]:
+              - /url: /green-card
+          - listitem [ref=e246]:
+            - link "Laws" [ref=e247] [cursor=pointer]:
+              - /url: /laws-and-policy
+          - listitem [ref=e248]:
+            - link "Tools" [ref=e249] [cursor=pointer]:
+              - /url: /tools
+      - generic [ref=e252]:
+        - img "U.S. Department of Homeland Security Seal, U.S. Citizenship and Immigration Services" [ref=e255]
+        - generic [ref=e256]:
+          - generic [ref=e257]:
+            - link "Facebook" [ref=e259] [cursor=pointer]:
+              - /url: https://www.facebook.com/uscis
+              - img "Facebook" [ref=e260]
+            - link "X, formerly known as Twitter" [ref=e262] [cursor=pointer]:
+              - /url: https://www.twitter.com/uscis
+              - img "X, formerly known as Twitter" [ref=e263]
+            - link "YouTube" [ref=e265] [cursor=pointer]:
+              - /url: https://www.youtube.com/uscis
+              - img "YouTube" [ref=e266]
+            - link "Instagram" [ref=e268] [cursor=pointer]:
+              - /url: https://www.instagram.com/uscis
+              - img "Instagram" [ref=e269]
+            - link "LinkedIn" [ref=e271] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/uscis
+              - img "LinkedIn" [ref=e272]
+            - link "Email" [ref=e274] [cursor=pointer]:
+              - /url: https://public.govdelivery.com/accounts/USDHSCIS/subscriber/new
+              - img "Email" [ref=e275]
+          - link "Contact USCIS" [ref=e277] [cursor=pointer]:
+            - /url: /about-us/contact-us
+      - generic [ref=e280]:
+        - generic [ref=e281]:
+          - region "Agency identifier" [ref=e282]:
+            - generic [ref=e283]:
+              - link "U.S. Department of Homeland Security Seal" [ref=e285] [cursor=pointer]:
+                - /url: https://www.dhs.gov
+                - img "U.S. Department of Homeland Security Seal" [ref=e286]
+              - generic [ref=e287]: Agency description
+              - generic [ref=e288]:
+                - paragraph [ref=e289]: USCIS.gov
+                - paragraph [ref=e290]:
+                  - text: An official website of the
+                  - link "U.S. Department of Homeland Security" [ref=e291] [cursor=pointer]:
+                    - /url: https://www.dhs.gov
+          - navigation "Important links" [ref=e293]:
+            - generic [ref=e294]: Important links
+            - list [ref=e297]:
+              - listitem [ref=e298]:
+                - link "About USCIS" [ref=e299] [cursor=pointer]:
+                  - /url: /about-us
+              - listitem [ref=e300]:
+                - link "Accessibility" [ref=e301] [cursor=pointer]:
+                  - /url: /website-policies/accessibility
+              - listitem [ref=e302]:
+                - link "Budget and Performance" [ref=e303] [cursor=pointer]:
+                  - /url: /about-us/budget-planning-and-performance
+              - listitem [ref=e304]:
+                - link "DHS Components" [ref=e305] [cursor=pointer]:
+                  - /url: /website-policies/dhs-component-websites
+              - listitem [ref=e306]:
+                - link "Freedom of Information Act" [ref=e307] [cursor=pointer]:
+                  - /url: /records/request-records-through-the-freedom-of-information-act-or-privacy-act
+              - listitem [ref=e308]:
+                - link "No FEAR Act Data" [ref=e309] [cursor=pointer]:
+                  - /url: /about-us/equal-employment-opportunity/equal-employment-opportunity-data-posted-pursuant-to-the-no-fear-act
+              - listitem [ref=e310]:
+                - link "Privacy and Legal Disclaimers" [ref=e311] [cursor=pointer]:
+                  - /url: /archive/privacy-and-legal-disclaimers
+              - listitem [ref=e312]:
+                - link "Site Map" [ref=e313] [cursor=pointer]:
+                  - /url: /sitemap
+              - listitem [ref=e314]:
+                - link "Office of the Inspector General" [ref=e315] [cursor=pointer]:
+                  - /url: https://www.oig.dhs.gov/
+              - listitem [ref=e316]:
+                - link "The White House" [ref=e317] [cursor=pointer]:
+                  - /url: https://www.whitehouse.gov/
+              - listitem [ref=e318]:
+                - link "USA.gov" [ref=e319] [cursor=pointer]:
+                  - /url: https://www.usa.gov/
+        - iframe [ref=e321]:
+          - 'link "DHS National Terrorism Advisory System: There are no current advisories" [ref=f1e3] [cursor=pointer]':
+            - /url: /national-terrorism-advisory-system
+            - 'img "DHS National Terrorism Advisory System: There are no current advisories" [ref=f1e4]'
+  - button "Need Help? Chat with Emma" [ref=e322]:
+    - img "Emma Logo" [ref=e323]

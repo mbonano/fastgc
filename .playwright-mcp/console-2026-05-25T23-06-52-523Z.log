@@ -1,0 +1,17 @@
+[    1747ms] [LOG] [main] starting {env: PROD, hooEndpoint: https://uscis.my.site.com/ESWOAISEmmaChannel1763090369120vforcesit/services/apexrest/EmmaHoopsCheck} @ https://d2n4zfio24poj1.cloudfront.net/chatwidget/bundle.js:99
+[    1829ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://www.uscis.gov/profiles/uscisd8_gov/themes/custom/uscis_design/assets/uswds/css/fonts/source-sans-pro/sourcesanspro-bold-webfont.woff2:0
+[    1848ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://www.uscis.gov/core/install.php:0
+[    1887ms] Invalid or unexpected token
+[    2027ms] [LOG] host name www.uscis.gov @ https://uscis.my.site.com/resource/1779750414122/MIAWChatWrapperJS:121
+[    2027ms] [LOG] sending prod @ https://uscis.my.site.com/resource/1779750414122/MIAWChatWrapperJS:124
+[    2027ms] [LOG] config production @ https://uscis.my.site.com/resource/1779750414122/MIAWChatWrapperJS:92
+[    2027ms] [LOG] config obj{"domain":"uscis.my.salesforce.com","baseCoreURL":"https://uscis.my.salesforce.com","channel":"OAIS_Emma_Channel","channelUrl":"https://uscis.my.site.com/ESWOAISEmmaChannel1763090369120","channelScrt2URL":"https://uscis.my.salesforce-scrt.com","orgId":"00DG0000000hO5S"} @ https://uscis.my.site.com/resource/1779750414122/MIAWChatWrapperJS:95
+[    2027ms] [LOG] BrowserDesktop lang en-US @ https://uscis.my.site.com/resource/1779750414122/MIAWChatWrapperJS:736
+[    2027ms] [LOG] bootstrap urlhttps://uscis.my.site.com/ESWOAISEmmaChannel1763090369120/assets/js/bootstrap.min.js @ https://uscis.my.site.com/resource/1779750414122/MIAWChatWrapperJS:109
+[  601842ms] [ERROR] TypeError: Cannot read properties of undefined (reading 'postMessage')
+    at Object.J [as disconnect] (https://d2n4zfio24poj1.cloudfront.net/chatwidget/bundle.js:88:51709)
+    at Object.onIdle [as current] (https://d2n4zfio24poj1.cloudfront.net/chatwidget/bundle.js:100:18322)
+    at je (https://d2n4zfio24poj1.cloudfront.net/chatwidget/bundle.js:88:44879)
+    at Object.onIdle (https://d2n4zfio24poj1.cloudfront.net/chatwidget/bundle.js:88:48873)
+    at $T.idle (https://d2n4zfio24poj1.cloudfront.net/chatwidget/bundle.js:88:40595)
+    at zt (https://d2n4zfio24poj1.cloudfront.net/chatwidget/bundle.js:88:45416) @ https://d2n4zfio24poj1.cloudfront.net/chatwidget/bundle.js:87

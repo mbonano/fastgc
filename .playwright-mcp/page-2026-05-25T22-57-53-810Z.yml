@@ -1,0 +1,71 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: FastGCYour plain-English guide to the U.S. Green Card
+      - generic [ref=e5]:
+        - generic [ref=e6]: Language
+        - combobox "Language" [ref=e7] [cursor=pointer]:
+          - option "English" [selected]
+          - option "Español"
+          - option "Русский"
+  - main [ref=e8]:
+    - generic [ref=e9]:
+      - heading "What is a Green Card?" [level=1] [ref=e10]
+      - paragraph [ref=e11]: A green card lets you live and work in the United States permanently. To apply, you must qualify under at least one of the categories below. Find the one that fits your situation to learn how to apply and how to speed up the process.
+    - button "Expand all" [ref=e13]
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - button "Green Card through Family" [expanded] [active] [ref=e16]:
+          - generic [ref=e17]: Green Card through Family
+          - img [ref=e19]
+        - region [ref=e76]:
+          - generic [ref=e78]:
+            - paragraph [ref=e79]: You may qualify through a family member who is a U.S. citizen or a green card holder.
+            - table [ref=e81]:
+              - rowgroup [ref=e82]:
+                - row "Who you can apply as Who you need to be" [ref=e83]:
+                  - columnheader "Who you can apply as" [ref=e84]
+                  - columnheader "Who you need to be" [ref=e85]
+              - rowgroup [ref=e86]:
+                - row "Immediate relative of a U.S. citizen The husband or wife of a U.S. citizen; OR a child (unmarried, under 21) of a U.S. citizen; OR a parent of a U.S. citizen who is at least 21 years old" [ref=e87]:
+                  - cell "Immediate relative of a U.S. citizen" [ref=e88]
+                  - cell "The husband or wife of a U.S. citizen; OR a child (unmarried, under 21) of a U.S. citizen; OR a parent of a U.S. citizen who is at least 21 years old" [ref=e89]
+                - row "Other family member (preference categories) An unmarried adult son or daughter of a U.S. citizen; OR a married son or daughter of a U.S. citizen; OR a brother or sister of a U.S. citizen (citizen must be at least 21); OR the husband or wife of a green card holder; OR an unmarried child (under 21) of a green card holder; OR an unmarried adult son or daughter of a green card holder" [ref=e90]:
+                  - cell "Other family member (preference categories)" [ref=e91]
+                  - cell "An unmarried adult son or daughter of a U.S. citizen; OR a married son or daughter of a U.S. citizen; OR a brother or sister of a U.S. citizen (citizen must be at least 21); OR the husband or wife of a green card holder; OR an unmarried child (under 21) of a green card holder; OR an unmarried adult son or daughter of a green card holder" [ref=e92]
+                - row "Fiancé(e) of a U.S. citizen or their child Someone who entered the U.S. on a K-1 visa to marry a U.S. citizen; OR a child who entered on a K-2 visa as the child of a K-1 fiancé(e)" [ref=e93]:
+                  - cell "Fiancé(e) of a U.S. citizen or their child" [ref=e94]
+                  - cell "Someone who entered the U.S. on a K-1 visa to marry a U.S. citizen; OR a child who entered on a K-2 visa as the child of a K-1 fiancé(e)" [ref=e95]
+                - row "Widow or widower of a U.S. citizen Someone whose U.S. citizen spouse died, and who was legally married to that person when they died" [ref=e96]:
+                  - cell "Widow or widower of a U.S. citizen" [ref=e97]
+                  - cell "Someone whose U.S. citizen spouse died, and who was legally married to that person when they died" [ref=e98]
+                - row "VAWA self-petitioner (abuse victim) An abused husband or wife of a U.S. citizen or green card holder; OR an abused unmarried child (under 21) of a U.S. citizen or green card holder; OR an abused parent of a U.S. citizen" [ref=e99]:
+                  - cell "VAWA self-petitioner (abuse victim)" [ref=e100]
+                  - cell "An abused husband or wife of a U.S. citizen or green card holder; OR an abused unmarried child (under 21) of a U.S. citizen or green card holder; OR an abused parent of a U.S. citizen" [ref=e101]
+      - button "Green Card through Employment" [ref=e22]:
+        - generic [ref=e23]: Green Card through Employment
+        - img [ref=e25]
+      - button "Green Card as a Special Immigrant" [ref=e28]:
+        - generic [ref=e29]: Green Card as a Special Immigrant
+        - img [ref=e31]
+      - button "Green Card through Refugee or Asylee Status" [ref=e34]:
+        - generic [ref=e35]: Green Card through Refugee or Asylee Status
+        - img [ref=e37]
+      - button "Green Card for Human Trafficking and Crime Victims" [ref=e40]:
+        - generic [ref=e41]: Green Card for Human Trafficking and Crime Victims
+        - img [ref=e43]
+      - button "Green Card for Victims of Abuse" [ref=e46]:
+        - generic [ref=e47]: Green Card for Victims of Abuse
+        - img [ref=e49]
+      - button "Green Card through Other Categories" [ref=e52]:
+        - generic [ref=e53]: Green Card through Other Categories
+        - img [ref=e55]
+      - button "Green Card through Registry" [ref=e58]:
+        - generic [ref=e59]: Green Card through Registry
+        - img [ref=e61]
+    - generic [ref=e63]:
+      - paragraph [ref=e64]: This information is based on official USCIS data and is for general information only — not legal advice. For your specific situation, consult a licensed immigration attorney.
+      - paragraph [ref=e65]: "Source: USCIS Green Card Eligibility Categories"
+  - button "Open Next.js Dev Tools" [ref=e71] [cursor=pointer]:
+    - img [ref=e72]
+  - alert [ref=e75]
