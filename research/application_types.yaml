@@ -55,6 +55,12 @@ legal_rights_and_recent_policies:
 
 travel_safety_and_documentation:
   general_risk_assessment: "International travel while an immigration application is pending carries distinct legal risks. Admission back into the U.S. is never guaranteed, and Customs and Border Protection (CBP) makes the final determination at the Port of Entry."
+  domestic_travel_within_the_us:
+    real_id_requirement: "As of May 7, 2025, the federal government requires all individuals 18 and older to present a REAL ID-compliant driver's license or another federally acceptable form of ID to board domestic commercial flights. Standard state licenses marked 'Federal Limits Apply' or 'Not for Federal Identification' are no longer accepted at TSA checkpoints."
+    tsa_acceptable_alternatives: "If an applicant cannot obtain a REAL ID due to their pending status, the TSA explicitly accepts unexpired foreign passports and unexpired Employment Authorization Documents (EAD cards / Form I-766) as valid primary identification for domestic flights."
+    cbp_presence_at_domestic_airports: "Many major domestic airports (e.g., in Texas, California, Florida, and upstate New York) fall within the 100-mile border zone. CBP agents frequently conduct internal checkpoints or roving operations at these domestic terminals. TSA agents are also authorized to refer individuals to CBP if they suspect an immigration violation during routine ID checks."
+    traveling_with_a_pending_application: "Domestic flights do not require an Advance Parole document (Form I-131) because the applicant is not leaving the United States. However, anyone flying domestically with a pending Adjustment of Status (I-485) should always carry their original I-797C Notice of Action receipt. If stopped by CBP, this receipt proves the traveler has an authorized period of stay."
+    risk_for_undocumented_individuals: "For individuals without legal status or a pending application, domestic air travel is extremely high risk. Using a foreign passport as TSA identification often triggers additional scrutiny, and encountering CBP at a domestic terminal can lead directly to detention and removal proceedings."
   travel_by_status:
     - status: "Pending I-485 (Adjustment of Status) - General"
       safety_level: "High Risk if unprepared"
@@ -469,7 +475,7 @@ application_types:
       - "Do NOT leave the U.S. without advance parole: Any departure from the U.S. while in U or T status — without first obtaining advance parole (Form I-131) — breaks the required 3 years of continuous physical presence and can permanently disqualify you from the green card adjustment."
     what_comes_next:
       - "Petitioning for family: After receiving your green card based on U or T status, you may petition for qualifying family members who also qualify for derivative status."
-      - "Naturalization: Apply for U.S citizenship 5 years after becoming a lawful permanent resident by filing Form N-400."
+      - "Naturalization: Apply for U.S. citizenship 5 years after becoming a lawful permanent resident by filing Form N-400."
       - "Green card renewal: Your green card must be renewed every 10 years using Form I-90."
 
   - name: "Green Card for Victims of Abuse (VAWA)"

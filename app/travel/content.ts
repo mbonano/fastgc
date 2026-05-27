@@ -35,15 +35,20 @@ export const travelUI = {
     es: 'Siempre consulte con un abogado de inmigración con licencia antes de viajar fuera de los EE.UU.',
     ru: 'Всегда консультируйтесь с лицензированным иммиграционным адвокатом перед поездкой за пределы США.',
   },
+  internationalBadge: {
+    en: 'International Travel Only',
+    es: 'Solo Viajes Internacionales',
+    ru: 'Только международные поездки',
+  },
   statusSectionHeader: {
-    en: 'Travel Safety by Your Immigration Status',
-    es: 'Seguridad de Viaje según Su Estatus Migratorio',
-    ru: 'Безопасность поездок по вашему иммиграционному статусу',
+    en: 'International Travel Safety by Your Immigration Status',
+    es: 'Seguridad en Viajes Internacionales según Su Estatus Migratorio',
+    ru: 'Безопасность международных поездок по вашему иммиграционному статусу',
   },
   statusSectionSubheader: {
-    en: 'Find your situation below to understand the risks',
-    es: 'Encuentre su situación a continuación para entender los riesgos',
-    ru: 'Найдите свою ситуацию ниже, чтобы понять риски',
+    en: 'This applies to travel outside the United States only. Find your situation below to understand the risks.',
+    es: 'Esto aplica únicamente a viajes fuera de los Estados Unidos. Encuentre su situación a continuación para entender los riesgos.',
+    ru: 'Это относится только к поездкам за пределы США. Найдите свою ситуацию ниже, чтобы понять риски.',
   },
   docsSectionHeader: {
     en: 'Documents You Must Carry When Traveling',
@@ -167,6 +172,93 @@ export const requiredDocuments: T[] = [
     en: 'If applicable: Original marriage certificate or civil documents connecting you (as a derivative applicant) to the main person on the application.',
     es: 'Si aplica: Certificado de matrimonio original o documentos civiles que le vinculen a usted (como solicitante derivado) con la persona principal de la solicitud.',
     ru: 'При необходимости: Оригинал свидетельства о браке или гражданские документы, связывающие вас (как зависимого заявителя) с основным лицом в заявлении.',
+  },
+]
+
+export interface DomesticTravelItem {
+  title: T
+  body: T
+  highlight?: 'warning' | 'tip' | 'info'
+}
+
+export const domesticTravelUI = {
+  sectionHeader: {
+    en: 'Domestic Travel Within the U.S.',
+    es: 'Viajes Domésticos Dentro de los EE.UU.',
+    ru: 'Внутренние перелёты в пределах США',
+  },
+  sectionSubheader: {
+    en: 'What to know before flying inside the United States',
+    es: 'Lo que necesita saber antes de volar dentro de los Estados Unidos',
+    ru: 'Что нужно знать перед внутренними рейсами в США',
+  },
+} satisfies Record<string, T>
+
+export const domesticTravelItems: DomesticTravelItem[] = [
+  {
+    title: {
+      en: 'REAL ID Now Required for Domestic Flights',
+      es: 'Se Requiere REAL ID para Vuelos Domésticos',
+      ru: 'REAL ID теперь обязателен для внутренних рейсов',
+    },
+    body: {
+      en: 'As of May 7, 2025, federal law requires all travelers 18 and older to present a REAL ID-compliant driver\'s license or another federally accepted ID to board domestic commercial flights. Standard state licenses marked "Federal Limits Apply" or "Not for Federal Identification" are no longer accepted at TSA checkpoints.',
+      es: 'A partir del 7 de mayo de 2025, la ley federal exige que todos los viajeros de 18 años o más presenten una licencia de conducir que cumpla con REAL ID u otra identificación aceptada a nivel federal para abordar vuelos comerciales domésticos. Las licencias estatales estándar marcadas con "Federal Limits Apply" o "Not for Federal Identification" ya no son aceptadas en los puntos de control de la TSA.',
+      ru: 'С 7 мая 2025 года федеральный закон требует, чтобы все путешественники 18 лет и старше предъявляли водительское удостоверение, соответствующее стандарту REAL ID, или другое федерально признанное удостоверение личности для посадки на внутренние коммерческие рейсы. Стандартные государственные удостоверения с пометкой «Federal Limits Apply» или «Not for Federal Identification» больше не принимаются на контрольно-пропускных пунктах TSA.',
+    },
+    highlight: 'warning',
+  },
+  {
+    title: {
+      en: 'Acceptable Alternatives if You Cannot Get a REAL ID',
+      es: 'Alternativas Aceptables si No Puede Obtener una REAL ID',
+      ru: 'Допустимые альтернативы, если вы не можете получить REAL ID',
+    },
+    body: {
+      en: 'If you cannot obtain a REAL ID due to your pending immigration status, the TSA explicitly accepts an unexpired foreign passport or an unexpired Employment Authorization Document (EAD card / Form I-766) as valid primary identification for domestic flights.',
+      es: 'Si no puede obtener una REAL ID debido a su estatus migratorio pendiente, la TSA acepta explícitamente un pasaporte extranjero vigente o un Documento de Autorización de Empleo vigente (tarjeta EAD / Formulario I-766) como identificación primaria válida para vuelos domésticos.',
+      ru: 'Если вы не можете получить REAL ID из-за своего незавершённого иммиграционного статуса, TSA явно принимает действующий иностранный паспорт или действующий документ о разрешении на работу (карта EAD / Форма I-766) в качестве действительного основного удостоверения личности для внутренних рейсов.',
+    },
+    highlight: 'tip',
+  },
+  {
+    title: {
+      en: 'CBP Agents Are Active at Many Domestic Airports',
+      es: 'Agentes de CBP Están Activos en Muchos Aeropuertos Domésticos',
+      ru: 'Агенты CBP активно работают во многих внутренних аэропортах',
+    },
+    body: {
+      en: 'Many major domestic airports in Texas, California, Florida, and upstate New York fall within the 100-mile border zone. CBP agents frequently conduct internal checkpoints or roving operations at these domestic terminals. TSA agents are also authorized to refer individuals to CBP if they suspect an immigration violation during routine ID checks.',
+      es: 'Muchos aeropuertos domésticos importantes en Texas, California, Florida y el norte del estado de Nueva York se encuentran dentro de la zona fronteriza de 100 millas. Los agentes de CBP frecuentemente realizan puntos de control internos u operaciones itinerantes en estas terminales domésticas. Los agentes de la TSA también están autorizados a remitir a personas a CBP si sospechan una violación de inmigración durante los controles de identificación de rutina.',
+      ru: 'Многие крупные внутренние аэропорты в Техасе, Калифорнии, Флориде и северной части штата Нью-Йорк находятся в пределах 100-мильной пограничной зоны. Агенты CBP часто проводят внутренние контрольно-пропускные пункты или мобильные операции в этих внутренних терминалах. Агенты TSA также уполномочены направлять людей к CBP, если они подозревают нарушение иммиграционного законодательства во время плановых проверок удостоверений личности.',
+    },
+    highlight: 'warning',
+  },
+  {
+    title: {
+      en: 'Flying Domestically with a Pending I-485',
+      es: 'Volar Domésticamente con una I-485 Pendiente',
+      ru: 'Внутренние перелёты при ожидающем рассмотрении I-485',
+    },
+    body: {
+      en: 'Domestic flights do not require an Advance Parole document (Form I-131) because you are not leaving the United States. However, anyone flying domestically with a pending Adjustment of Status (I-485) should always carry their original I-797C Notice of Action receipt. If stopped by CBP, this receipt proves you have an authorized period of stay.',
+      es: 'Los vuelos domésticos no requieren un documento de Advance Parole (Formulario I-131) porque usted no está saliendo de los Estados Unidos. Sin embargo, cualquier persona que vuele domésticamente con un Ajuste de Estatus (I-485) pendiente siempre debe llevar su Aviso de Acción I-797C original. Si CBP le detiene, este recibo prueba que tiene un período de estadía autorizado.',
+      ru: 'Внутренние рейсы не требуют документа Advance Parole (Форма I-131), поскольку вы не покидаете Соединённые Штаты. Однако любой, кто летит внутренними рейсами при ожидающем рассмотрении заявления на изменение статуса (I-485), всегда должен иметь при себе оригинал уведомления I-797C Notice of Action. Если CBP задержит вас, эта квитанция подтверждает, что у вас есть авторизованный период пребывания.',
+    },
+    highlight: 'info',
+  },
+  {
+    title: {
+      en: 'High Risk for Undocumented Individuals',
+      es: 'Alto Riesgo para Personas Indocumentadas',
+      ru: 'Высокий риск для лиц без документов',
+    },
+    body: {
+      en: 'For individuals without legal status or a pending application, domestic air travel is extremely high risk. Using a foreign passport as TSA identification often triggers additional scrutiny, and encountering CBP at a domestic terminal can lead directly to detention and removal proceedings.',
+      es: 'Para las personas sin estatus legal o una solicitud pendiente, los viajes aéreos domésticos son de riesgo extremadamente alto. Usar un pasaporte extranjero como identificación en la TSA a menudo desencadena un escrutinio adicional, y encontrarse con CBP en una terminal doméstica puede llevar directamente a la detención e inicio de procedimientos de deportación.',
+      ru: 'Для лиц без законного статуса или ожидающего заявления внутренние авиаперелёты несут крайне высокий риск. Использование иностранного паспорта в качестве удостоверения личности для TSA часто вызывает дополнительную проверку, а встреча с CBP в внутреннем терминале может привести непосредственно к задержанию и возбуждению процедуры депортации.',
+    },
+    highlight: 'warning',
   },
 ]
 

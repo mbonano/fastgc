@@ -1,8 +1,32 @@
 'use client'
 
 import { useLanguage } from '../context/language'
-import { travelUI, travelByStatus, requiredDocuments, practicalTips } from './content'
-import type { SafetyLevel } from './content'
+import { travelUI, travelByStatus, requiredDocuments, practicalTips, domesticTravelUI, domesticTravelItems } from './content'
+import type { SafetyLevel, DomesticTravelItem } from './content'
+
+const DOMESTIC_HIGHLIGHT_STYLES = {
+  warning: {
+    icon: 'text-amber-500',
+    iconPath: 'M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z',
+    title: 'text-amber-800',
+    body: 'text-amber-700',
+    bg: 'bg-amber-50 border-amber-200',
+  },
+  tip: {
+    icon: 'text-green-500',
+    iconPath: 'M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z',
+    title: 'text-green-800',
+    body: 'text-green-700',
+    bg: 'bg-green-50 border-green-200',
+  },
+  info: {
+    icon: 'text-sky-500',
+    iconPath: 'M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z',
+    title: 'text-sky-800',
+    body: 'text-sky-700',
+    bg: 'bg-sky-50 border-sky-200',
+  },
+} satisfies Record<NonNullable<DomesticTravelItem['highlight']>, unknown>
 
 const SAFETY_STYLES: Record<SafetyLevel, { badge: string; border: string; bg: string; text: string; ruleText: string }> = {
   safe: {
@@ -66,12 +90,51 @@ export default function TravelPage() {
           </div>
         </div>
 
-        {/* Travel by status */}
+        {/* Domestic travel */}
         <section className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-100 bg-gray-50">
             <h2 className="text-sm font-semibold text-gray-700 uppercase tracking-wide">
-              {travelUI.statusSectionHeader[lang]}
+              {domesticTravelUI.sectionHeader[lang]}
             </h2>
+            <p className="mt-1 text-xs text-gray-500">{domesticTravelUI.sectionSubheader[lang]}</p>
+          </div>
+          <div className="divide-y divide-gray-100">
+            {domesticTravelItems.map((item, i) => {
+              const style = item.highlight ? DOMESTIC_HIGHLIGHT_STYLES[item.highlight] : null
+              return (
+                <div key={i} className={`px-6 py-5 ${style ? `${style.bg} border-l-4` : ''}`}>
+                  <div className="flex items-start gap-3">
+                    {style && (
+                      <svg className={`w-4 h-4 flex-shrink-0 mt-0.5 ${style.icon}`} viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d={style.iconPath} clipRule="evenodd" />
+                      </svg>
+                    )}
+                    <div>
+                      <p className={`text-sm font-semibold ${style ? style.title : 'text-gray-800'}`}>
+                        {item.title[lang]}
+                      </p>
+                      <p className={`mt-1 text-sm leading-relaxed ${style ? style.body : 'text-gray-600'}`}>
+                        {item.body[lang]}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </section>
+
+        {/* Travel by status */}
+        <section className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+          <div className="px-6 py-4 border-b border-gray-100 bg-gray-50">
+            <div className="flex items-center gap-2 flex-wrap">
+              <h2 className="text-sm font-semibold text-gray-700 uppercase tracking-wide">
+                {travelUI.statusSectionHeader[lang]}
+              </h2>
+              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 whitespace-nowrap">
+                {travelUI.internationalBadge[lang]}
+              </span>
+            </div>
             <p className="mt-1 text-xs text-gray-500">{travelUI.statusSectionSubheader[lang]}</p>
           </div>
           <div className="divide-y divide-gray-100">
