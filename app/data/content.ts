@@ -223,6 +223,41 @@ export const ui = {
     es: 'Ocultar',
     ru: 'Скрыть',
   },
+  navHome: {
+    en: 'Home',
+    es: 'Inicio',
+    ru: 'Главная',
+  },
+  navIce: {
+    en: 'ICE & Rights',
+    es: 'ICE y Derechos',
+    ru: 'ИДС и Права',
+  },
+  navTravel: {
+    en: 'Travel & Docs',
+    es: 'Viajes y Docs',
+    ru: 'Поездки и Документы',
+  },
+  borderZoneChecking: {
+    en: 'Checking your location…',
+    es: 'Verificando su ubicación…',
+    ru: 'Определяем местоположение…',
+  },
+  borderZoneInside: {
+    en: 'You are within the 100-mile border zone',
+    es: 'Usted está dentro de la zona fronteriza de 100 millas',
+    ru: 'Вы находитесь в зоне 100 миль от границы',
+  },
+  borderZoneOutside: {
+    en: 'You are outside the 100-mile border zone',
+    es: 'Usted está fuera de la zona fronteriza de 100 millas',
+    ru: 'Вы находитесь за пределами зоны 100 миль от границы',
+  },
+  borderZoneError: {
+    en: 'Location access denied — border zone status unknown',
+    es: 'Acceso a ubicación denegado — estado de zona fronteriza desconocido',
+    ru: 'Доступ к местоположению запрещён — статус пограничной зоны неизвестен',
+  },
 } satisfies Record<string, T>
 
 export const categories: AnyGroup[] = [

@@ -69,3 +69,11 @@ These are amazing suggestions! I want you to do two things:
 2) Update the main and detail pages to close the gaps in process navigation tools and post-filing knowledge.
 
 The challenge will be in keeping the UI simple, clean and easy to navigate. If we are adding too much information to the detail view, feel free to add collapable sections for add additional navigation steps to the UI to make things easy for a user to navigate. A remember, the target audience for this app are immigrants who are very likely speak english as a second language and very little to no information about the immigration process. Cater the UI to them. Keep things simple, easy to navigate. 
+
+### adding more sophisticated features
+
+Add two new sections to the app, each with it's own link in the header: "ICE: What you need to know" and "Travel & Documentation". Reference @research/application_types.yaml:
+
+Use the information in "enforcement_and_legal_limitations" to populate the page with information of ICE enforcement powers. Use the user's current location to see if they are within 100 miles of a border zone and display whether or not they are on the page.
+
+Use the information in "travel_safety_and_documentation" to populate the page with information on general risk assessment and safety level and rules based on status.

@@ -1,6 +1,8 @@
 field_definitions:
   can_file_concurrently: "Rationale: Tracking whether an applicant can submit their primary petition (e.g., I-130 or I-140) at the exact same time as their Green Card application (I-485). Being able to file concurrently drastically changes the legal strategy because it allows the applicant to apply for a work permit and travel authorization immediately, rather than waiting years."
   common_waivers_needed: "Rationale: Qualifying for a category is only step one; many applicants require an accompanying waiver (like an I-601A for unlawful presence or I-601 for fraud/misrepresentation) if they triggered inadmissibility. Tracking the most common waivers associated with each category helps anticipate timeline delays and extra legal steps."
+  attorney_required_tasks: "Rationale: Highlights complex legal assessments, risk management, and procedural hurdles that legally or strategically require professional counsel to avoid permanent denial or removal."
+  independent_sequential_checklist: "Rationale: Empowers the applicant with an actionable, chronological roadmap of administrative steps they can confidently handle themselves, reducing overhead and friction."
 
 static_elements:
   header_title: FastGC
@@ -10,6 +12,68 @@ static_elements:
   footer_disclaimer: |
     This information is based on official USCIS data and is for general information only — not legal advice. For your specific situation, consult a licensed immigration attorney.
     Source: USCIS Green Card Eligibility Categories
+
+legal_rights_and_recent_policies:
+  uscis_memo_may_2026:
+    source_link: "https://www.uscis.gov/sites/default/files/document/memos/PM-602-0199-AdjustmentOfStatusAndDiscretion-20260521.pdf"
+    simple_explanation: "On May 21, 2026, USCIS released a new rule (Memo PM-602-0199). It tells immigration officers to treat getting a green card inside the U.S. as a special privilege, not an automatic right. Officers now have more power to say no."
+    key_impacts:
+      - "Stricter Reviews: Meeting the basic rules is no longer enough. Officers will look at your whole life history and can deny your application just because they think you don't deserve the privilege."
+      - "Zero Tolerance for Mistakes: Officers will be very strict if you ever worked without permission or stayed past your visa expiration date."
+      - "High Risk for Tourists and Students: People on student (F-1) or tourist (B-2) visas are at high risk. Applying for a green card goes against the temporary nature of these visas, which officers can now use as a reason for denial."
+      - "Work Visas are Safer, but not Immune: People on work visas (like H-1B or L-1) are safer because those visas legally allow you to want a green card. But even then, any past mistakes can still lead to a denial."
+      - "Who is Safe: This strict rule does not apply to refugees, asylees, or victims of abuse and crime (like VAWA, U, T, or SIJ visa applicants)."
+
+  ice_and_cbp_powers:
+    simple_explanation: "Immigration and Customs Enforcement (ICE) and Customs and Border Protection (CBP) have a lot of power to enforce immigration laws, but the U.S. Constitution (specifically the 4th and 5th Amendments) strictly limits what they can do."
+    what_they_can_legally_do:
+      - action: "The 100-Mile Zone"
+        explanation: "Within 100 air miles of any U.S. border or coastline, Border Patrol can legally board and search buses, trains, and ships."
+        legal_source: "8 U.S. Code § 1357 (https://www.law.cornell.edu/uscode/text/8/1357)"
+      - action: "Permanent Checkpoints"
+        explanation: "They can set up permanent checkpoints within this 100-mile zone and briefly stop cars to ask about citizenship without needing a specific reason."
+        legal_source: "United States v. Martinez-Fuerte, 1976 (https://supreme.justia.com/cases/federal/us/428/543/)"
+      - action: "Roving Patrols (Driving Around)"
+        explanation: "If agents are driving around, they can only pull your car over if they have a 'reasonable suspicion' (a specific, provable reason) to think you are breaking an immigration law."
+        legal_source: "United States v. Brignoni-Ponce, 1975 (https://supreme.justia.com/cases/federal/us/422/873/)"
+      - action: "Public Arrests"
+        explanation: "ICE agents can arrest people in public places if they have an official agency paper called an administrative warrant (Form I-200 or I-205)."
+        legal_source: "Immigration and Nationality Act (INA) Section 287"
+    what_they_cannot_do_where_they_break_the_law:
+      - limitation: "Entering Your Home Without Permission"
+        explanation: "They CANNOT enter your private home without your permission UNLESS they have a criminal warrant signed by a real judge. An ICE administrative warrant does NOT give them the right to force their way in. Forcing entry breaks the 4th Amendment."
+        legal_source: "Fourth Amendment to the U.S. Constitution (https://constitution.congress.gov/constitution/amendment-4/)"
+      - limitation: "Holding You Too Long at a Checkpoint"
+        explanation: "They CANNOT keep you stopped at a checkpoint for a long time just to investigate your status unless they strongly suspect you of a crime. A stop must be brief."
+        legal_source: "Rodriguez v. United States, 2015 (https://supreme.justia.com/cases/federal/us/575/13-9972/)"
+      - limitation: "Searching Your Car Without Proof"
+        explanation: "They CANNOT search the inside of your car without your permission or without strong proof (probable cause) that you are hiding something illegal."
+        legal_source: "Almeida-Sanchez v. United States, 1973 (https://supreme.justia.com/cases/federal/us/413/266/)"
+      - limitation: "Arresting You Just for Staying Silent"
+        explanation: "You have the right to stay silent under the 5th Amendment. They CANNOT legally arrest you or search you just because you refuse to answer questions about where you were born or your citizenship status."
+        legal_source: "Fifth Amendment to the U.S. Constitution (https://constitution.congress.gov/constitution/amendment-5/)"
+
+travel_safety_and_documentation:
+  general_risk_assessment: "International travel while an immigration application is pending carries distinct legal risks. Admission back into the U.S. is never guaranteed, and Customs and Border Protection (CBP) makes the final determination at the Port of Entry."
+  travel_by_status:
+    - status: "Pending I-485 (Adjustment of Status) - General"
+      safety_level: "High Risk if unprepared"
+      rule: "Leaving the U.S. without an approved Advance Parole document (Form I-131) generally results in the abandonment and denial of the I-485 application."
+    - status: "Pending I-485 with Valid H-1B or L-1 Status"
+      safety_level: "Generally Safe"
+      rule: "H-1B and L-1 are dual-intent visas. Holders can travel and re-enter using their valid visa stamp without needing Advance Parole and without abandoning their green card application."
+    - status: "Refugees and Asylees"
+      safety_level: "Highly Restricted"
+      rule: "Travel to the country of feared persecution can be viewed as 're-availment' of that country's protection, risking the termination of refugee/asylee status. Must travel using a Refugee Travel Document."
+    - status: "Individuals with Past Unlawful Presence or Criminal History"
+      safety_level: "Unsafe"
+      rule: "Even with approved Advance Parole, departing the U.S. can trigger inadmissibility bars or subject the traveler to intense scrutiny and potential denial of entry by CBP."
+  required_travel_documents:
+    - "A valid, unexpired passport from your country of citizenship."
+    - "A valid, unexpired Advance Parole Document (Form I-512) OR a valid dual-intent visa stamp (H-1B, L-1)."
+    - "The original Form I-797C Notice of Action receipt for the pending I-485 application."
+    - "For employment-based applicants: Recent pay stubs and a current employment verification letter."
+    - "If applicable, original marriage or civil documents tying the derivative applicant to the primary sponsor."
 
 application_types:
   - name: "Green Card through Family"
@@ -27,6 +91,32 @@ application_types:
       - who_you_can_apply_as: "VAWA self-petitioner (abuse victim)"
         who_you_need_to_be: "An abused husband or wife of a U.S. citizen or green card holder; OR an abused unmarried child (under 21) of a U.S. citizen or green card holder; OR an abused parent of a U.S. citizen."
     target_timeline: "10-14 months for immediate relatives of U.S. citizens. 2 to 20+ years for family preference categories, depending on the priority date."
+    attorney_required_tasks:
+      - "Analyzing previous unlawful presence, visa overstays, or entries without inspection to determine waiver eligibility."
+      - "Drafting and filing Form I-601 or I-601A waivers for fraud, misrepresentation, or criminal history."
+      - "Representing the couple at a split 'Stokes Interview' if USCIS suspects marriage fraud."
+      - "Responding to complex Requests for Evidence (RFEs) challenging the legitimacy of a marriage or financial self-sufficiency."
+    independent_sequential_checklist:
+      - step: 1
+        task: "Gather foundational civil documents (birth certificates, marriage licenses, divorce decrees)."
+        form_link: "N/A"
+        timeline_notes: "Complete within 1–2 weeks."
+      - step: 2
+        task: "Sponsor files Form I-130 (Petition for Alien Relative) online."
+        form_link: "https://www.uscis.gov/i-130"
+        timeline_notes: "Takes 1–2 hours to submit online; priority date established immediately."
+      - step: 3
+        task: "Applicant prepares Form I-485 (Adjustment of Status) packet for paper mailing."
+        form_link: "https://www.uscis.gov/i-485"
+        timeline_notes: "Can be filed concurrently with Step 2 for immediate relatives."
+      - step: 4
+        task: "Sponsor completes Form I-864 (Affidavit of Support) and pulls certified IRS tax transcripts."
+        form_link: "https://www.uscis.gov/i-864"
+        timeline_notes: "Must accompany the Form I-485 packet."
+      - step: 5
+        task: "Schedule and undergo a medical examination with a USCIS-designated civil surgeon to complete Form I-693."
+        form_link: "https://www.uscis.gov/i-693"
+        timeline_notes: "Schedule 2 weeks before mailing packet to ensure signed, sealed results are enclosed."
     steps:
       - "Step 1: Sponsor files Form I-130, Petition for Alien Relative."
       - "Step 2: If inside the U.S. and eligible, applicant files Form I-485, Adjustment of Status (can be concurrent with I-130 for immediate relatives)."
@@ -81,17 +171,43 @@ application_types:
     simple_description: "You may qualify because of your job skills, education, or investment in the U.S. economy."
     explanation: "This pathway is for foreign nationals seeking permanent residence based on their job skills, education, or investment. It is divided into five preference categories (EB-1 through EB-5). Most employment categories require a U.S. employer to sponsor the applicant and obtain a labor certification. Self-petitioning is only available for specific EB-1, National Interest Waiver (EB-2), and EB-5 categories."
     applicants:
-    - who_you_can_apply_as: "Immigrant worker — Priority (EB-1)" 
-      who_you_need_to_be: "Someone with extraordinary ability in science, arts, education, business, or sports; OR an outstanding professor or researcher; OR a top-level manager or executive at a multinational company"
-    - who_you_can_apply_as: "Immigrant worker — Advanced degree or exceptional ability (EB-2)"
-      who_you_need_to_be: "Someone whose job requires an advanced degree (master's or higher); OR someone with exceptional ability in science, arts, or business; OR a person seeking a national interest waiver (your work greatly benefits the U.S.)"
-    - who_you_can_apply_as: "Immigrant worker — Skilled, professional, or unskilled (EB-3)"
-      who_you_need_to_be: "A skilled worker (job requires at least 2 years of training or experience); OR a professional (job requires at least a 4-year U.S. bachelor's degree); OR an unskilled worker (job requires less than 2 years of training)"
-    - who_you_can_apply_as: "Physician National Interest Waiver"
-      who_you_need_to_be: "A doctor who agrees to work full-time in a medically underserved area in the U.S. for a set period of time"
-    - who_you_can_apply_as: "Immigrant investor (EB-5)"
-      who_you_need_to_be: "Someone who has invested (or is in the process of investing) at least $1,050,000 in a new U.S. business that creates full-time jobs for at least 10 workers (investment can be $800,000 if the business is in a low-employment or rural area)"
+      - who_you_can_apply_as: "Immigrant worker — Priority (EB-1)" 
+        who_you_need_to_be: "Someone with extraordinary ability in science, arts, education, business, or sports; OR an outstanding professor or researcher; OR a top-level manager or executive at a multinational company"
+      - who_you_can_apply_as: "Immigrant worker — Advanced degree or exceptional ability (EB-2)"
+        who_you_need_to_be: "Someone whose job requires an advanced degree (master's or higher); OR someone with exceptional ability in science, arts, or business; OR a person seeking a national interest waiver (your work greatly benefits the U.S.)"
+      - who_you_can_apply_as: "Immigrant worker — Skilled, professional, or unskilled (EB-3)"
+        who_you_need_to_be: "A skilled worker (job requires at least 2 years of training or experience); OR a professional (job requires at least a 4-year U.S. bachelor's degree); OR an unskilled worker (job requires less than 2 years of training)"
+      - who_you_can_apply_as: "Physician National Interest Waiver"
+        who_you_need_to_be: "A doctor who agrees to work full-time in a medically underserved area in the U.S. for a set period of time"
+      - who_you_can_apply_as: "Immigrant investor (EB-5)"
+        who_you_need_to_be: "Someone who has invested (or is in the process of investing) at least $1,050,000 in a new U.S. business that creates full-time jobs for at least 10 workers (investment can be $800,000 if the business is in a low-employment or rural area)"
     target_timeline: "1.5 to 3 years for most categories if priority date is current. Can exceed 10+ years for applicants from backlogged countries."
+    attorney_required_tasks:
+      - "Drafting the ETA Form 9089 and managing structural recruitment compliance for the DOL PERM process."
+      - "Structuring complex corporate financial arguments to demonstrate the employer's ongoing 'ability to pay' the proffered wage."
+      - "Formulating the narrative legal briefs required to secure an EB-2 National Interest Waiver (NIW) or EB-1 extraordinary capability petition."
+      - "Reviewing job profiles under AC21 portability guidelines to ensure a new job is legally 'same or similar.'"
+    independent_sequential_checklist:
+      - step: 1
+        task: "Secure official, detailed employment verification letters from all previous employers matching resume qualifications."
+        form_link: "N/A"
+        timeline_notes: "Allow 2–4 weeks; do this during the early recruitment phase."
+      - step: 2
+        task: "Obtain a certified evaluation of foreign academic degrees to prove U.S. equivalence."
+        form_link: "N/A"
+        timeline_notes: "Takes 1–2 weeks via NACES-approved services."
+      - step: 3
+        task: "Track the monthly Department of State Visa Bulletin to monitor priority date progression."
+        form_link: "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"
+        timeline_notes: "Check around the 15th of every month."
+      - step: 4
+        task: "Prepare Form I-485 Adjustment of Status paperwork once the priority date is verified as current."
+        form_link: "https://www.uscis.gov/i-485"
+        timeline_notes: "Can be ready to mail on day 1 of the active target month."
+      - step: 5
+        task: "Obtain an updated, signed Form I-485 Supplement J from your sponsoring employer's HR division."
+        form_link: "https://www.uscis.gov/i-485supplementj"
+        timeline_notes: "Must be signed close to the date of I-485 filing or in response to a final RFE."
     steps:
       - "Step 1: Employer obtains Prevailing Wage Determination and conducts recruitment (if PERM Labor Certification is required)."
       - "Step 2: Employer files PERM Labor Certification with the Department of Labor."
@@ -142,17 +258,38 @@ application_types:
     simple_description: "Certain groups of people have their own special path to a green card."
     explanation: "This category covers specialized groups, including religious workers, Special Immigrant Juveniles (SIJ), and Afghan or Iraqi nationals who assisted the U.S. government. Each sub-group has highly specific eligibility requirements. It operates under the fourth employment preference (EB-4) category."
     applicants:
-    - who_you_can_apply_as: "Religious worker"	
-      who_you_need_to_be: "A minister or other religious worker who is coming to the U.S. to work for a nonprofit religious organization"
-    - who_you_can_apply_as: "Special Immigrant Juvenile"
-      who_you_need_to_be: "A young person (under 21) who was abused, abandoned, or neglected by a parent, and who has a court order protecting them"
-    - who_you_can_apply_as: "Afghan or Iraqi national"
-      who_you_need_to_be: "An Afghan or Iraqi person who worked as a translator or interpreter for the U.S. government; OR an Iraqi person who worked for the U.S. government in Iraq for at least 1 year after March 20, 2003; OR an Afghan person who worked for the U.S. government or NATO forces (ISAF)"
-    - who_you_can_apply_as: "International broadcaster"
-      who_you_need_to_be: "Someone coming to the U.S. to work in media for the U.S. Agency for Global Media (USAGM) or a USAGM partner organization"
-    - who_you_can_apply_as: "International organization or NATO employee (or their family)"
-      who_you_need_to_be: "A retired officer or employee of a qualifying international organization or NATO; OR an eligible family member of such a person"
+      - who_you_can_apply_as: "Religious worker"	
+        who_you_need_to_be: "A minister or other religious worker who is coming to the U.S. to work for a nonprofit religious organization"
+      - who_you_can_apply_as: "Special Immigrant Juvenile"
+        who_you_need_to_be: "A young person (under 21) who was abused, abandoned, or neglected by a parent, and who has a court order protecting them"
+      - who_you_can_apply_as: "Afghan or Iraqi national"
+        who_you_need_to_be: "An Afghan or Iraqi person who worked as a translator or interpreter for the U.S. government; OR an Iraqi person who worked for the U.S. government in Iraq for at least 1 year after March 20, 2003; OR an Afghan person who worked for the U.S. government or NATO forces (ISAF)"
+      - who_you_can_apply_as: "International broadcaster"
+        who_you_need_to_be: "Someone coming to the U.S. to work in media for the U.S. Agency for Global Media (USAGM) or a USAGM partner organization"
+      - who_you_can_apply_as: "International organization or NATO employee (or their family)"
+        who_you_need_to_be: "A retired officer or employee of a qualifying international organization or NATO; OR an eligible family member of such a person"
     target_timeline: "1 to 3 years, depending on the specific sub-category and EB-4 visa availability."
+    attorney_required_tasks:
+      - "Navigating state juvenile courts to litigate and capture explicit, legally sound SIJ predicate findings."
+      - "Assembling regulatory compliance briefs for religious institutions to survive unannounced USCIS site evaluations."
+      - "Drafting custom requests for human development or state-level administrative relief to override structural visa limits."
+    independent_sequential_checklist:
+      - step: 1
+        task: "Obtain formal certified copies of the underlying state court decree or military mission verification letters."
+        form_link: "N/A"
+        timeline_notes: "Allow 1–3 weeks depending on the administrative clerk or office."
+      - step: 2
+        task: "Prepare and file Form I-360 with specific supplemental records linked to the sub-category."
+        form_link: "https://www.uscis.gov/i-360"
+        timeline_notes: "Filing fees are frequently exempted for SIJ and Iraqi/Afghan operational personnel."
+      - step: 3
+        task: "Track priority numbers via the monthly Visa Bulletin under the Employment Fourth (EB-4) tier."
+        form_link: "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"
+        timeline_notes: "Review monthly to identify file windows."
+      - step: 4
+        task: "File Form I-485 packet once priority windows unlock."
+        form_link: "https://www.uscis.gov/i-485"
+        timeline_notes: "Incorporate fee exemption confirmations if structurally supported by your category."
     steps:
       - "Step 1: File Form I-360, Petition for Amerasian, Widow(er), or Special Immigrant."
       - "Step 2: Obtain approval of the I-360 petition."
@@ -196,11 +333,32 @@ application_types:
     simple_description: "If you came to the U.S. as a refugee or were granted asylum, you can apply for a green card after one year."
     explanation: "Foreign nationals admitted to the U.S. as refugees or granted asylum are required (refugees) or eligible (asylees) to apply for a green card after one year of physical presence in the United States. This category provides a permanent safe haven for those who fled persecution. Derivatives (spouses and children) granted status along with the principal can also adjust."
     applicants:
-    - who_you_can_apply_as: "Asylee"
-      who_you_need_to_be: "Someone who was granted asylum in the U.S. at least 1 year ago"
-    - who_you_can_apply_as: "Refugee"
-      who_you_need_to_be: "Someone who entered the U.S. as a refugee at least 1 year ago"
+      - who_you_can_apply_as: "Asylee"
+        who_you_need_to_be: "Someone who was granted asylum in the U.S. at least 1 year ago"
+      - who_you_can_apply_as: "Refugee"
+        who_you_need_to_be: "Someone who entered the U.S. as a refugee at least 1 year ago"
     target_timeline: "1.5 to 2.5 years for the I-485 application to be processed, depending heavily on security background checks."
+    attorney_required_tasks:
+      - "Evaluating and legally navigating risk parameters if an applicant holds travel history that points to 're-availment' of protection from the home country."
+      - "Preparing complex Form I-602 waivers to overcome criminal items, health exclusions, or historical status irregularities."
+      - "Drafting federal Writ of Mandamus lawsuits if background security clear screens remain locked for years without justification."
+    independent_sequential_checklist:
+      - step: 1
+        task: "Pull absolute historical I-94 travel history files online to explicitly calculate and confirm 365 days of physical presence."
+        form_link: "https://i94.cbp.dhs.gov/"
+        timeline_notes: "Execute immediately upon crossing the 1-year asylum/refugee grant threshold."
+      - step: 2
+        task: "Complete the master Form I-485 application layout."
+        form_link: "https://www.uscis.gov/i-485"
+        timeline_notes: "Refugees enjoy a $0 statutory processing rate; Asylees must incorporate the standard $1,440 fee or present a fee waiver."
+      - step: 3
+        task: "Evaluate eligibility thresholds for low-income profiles and prepare Form I-912 if requesting a full fee waiver."
+        form_link: "https://www.uscis.gov/i-912"
+        timeline_notes: "Must be bundled and attached directly over the root Form I-485 page."
+      - step: 4
+        task: "Secure official baseline processing documentation, including copy packets of the original Asylum Approval Letter or immigration judge ruling records."
+        form_link: "N/A"
+        timeline_notes: "Allow 1 week to locate and print clear photocopies."
     steps:
       - "Step 1: Accumulate one year of physical presence in the U.S. after being admitted as a refugee or granted asylum."
       - "Step 2: File Form I-485, Application to Register Permanent Residence."
@@ -247,11 +405,31 @@ application_types:
     simple_description: "If you are a victim of trafficking or certain crimes and you helped law enforcement, you may be able to get a green card."
     explanation: "This category allows individuals who have been granted T nonimmigrant status (trafficking victims) or U nonimmigrant status (crime victims) to adjust to permanent resident status. These pathways are designed to protect vulnerable individuals who have cooperated with U.S. law enforcement. It requires continuous physical presence in the U.S. for a specified period."
     applicants:
-    - who_you_can_apply_as: "Human trafficking victim"
-      who_you_need_to_be: "Someone who currently has a T visa (given to victims of human trafficking)"
-    - who_you_can_apply_as: "Crime victim"
-      who_you_need_to_be: "Someone who currently has a U visa (given to victims of certain crimes who helped police or prosecutors)"
+      - who_you_can_apply_as: "Human trafficking victim"
+        who_you_need_to_be: "Someone who currently has a T visa (given to victims of human trafficking)"
+      - who_you_can_apply_as: "Crime victim"
+        who_you_need_to_be: "Someone who currently has a U visa (given to victims of certain crimes who helped police or prosecutors)"
     target_timeline: "1.5 to 2.5 years after filing the adjustment application. The wait for the underlying U visa currently exceeds 5+ years."
+    attorney_required_tasks:
+      - "Interfacing with and applying formal legal leverage to police chiefs, federal agents, or prosecutors who refuse to execute updated cooperation verifications."
+      - "Analyzing complex 'good moral character' shortfalls to ensure minor infractions do not lead directly into active removal proceedings."
+    independent_sequential_checklist:
+      - step: 1
+        task: "Reach out to the initial law enforcement division to request an official verification letter confirming ongoing cooperation stance."
+        form_link: "N/A"
+        timeline_notes: "Initiate 3–4 months prior to reaching the 3-year continuous presence point."
+      - step: 2
+        task: "Request local certified police clearance records for every jurisdiction where you have resided over the past 3 years."
+        form_link: "N/A"
+        timeline_notes: "Takes 2–3 weeks to systematically secure."
+      - step: 3
+        task: "Compile formal housing and income records (leases, pay stubs, utilities) tracking every consecutive month of the 3-year timeline."
+        form_link: "N/A"
+        timeline_notes: "Dedicate 1–2 weeks to establish an orderly data folder."
+      - step: 4
+        task: "Complete Form I-485 along with Form I-912 to cleanly request an entry fee waiver."
+        form_link: "https://www.uscis.gov/i-485"
+        timeline_notes: "Submit precisely on the 3-year anniversary window."
     steps:
       - "Step 1: Hold valid T or U nonimmigrant status and meet the physical presence requirement (usually 3 years)."
       - "Step 2: File Form I-485, Adjustment of Status."
@@ -291,22 +469,43 @@ application_types:
       - "Do NOT leave the U.S. without advance parole: Any departure from the U.S. while in U or T status — without first obtaining advance parole (Form I-131) — breaks the required 3 years of continuous physical presence and can permanently disqualify you from the green card adjustment."
     what_comes_next:
       - "Petitioning for family: After receiving your green card based on U or T status, you may petition for qualifying family members who also qualify for derivative status."
-      - "Naturalization: Apply for U.S. citizenship 5 years after becoming a lawful permanent resident by filing Form N-400."
+      - "Naturalization: Apply for U.S citizenship 5 years after becoming a lawful permanent resident by filing Form N-400."
       - "Green card renewal: Your green card must be renewed every 10 years using Form I-90."
 
   - name: "Green Card for Victims of Abuse (VAWA)"
     simple_description: "If you have been abused or hurt by someone in your family and you are living in the U.S., there may be a way for you to get a green card without your abuser's help."
     explanation: "Under the Violence Against Women Act (VAWA), abused spouses, children, and parents of U.S. citizens or lawful permanent residents can self-petition for a green card. This allows victims to seek safety and independence without the abuser's knowledge. It applies to all genders, despite the name of the act."
     applicants:
-    - who_you_can_apply_as: "VAWA self-petitioner (abuse victim)"
-      who_you_need_to_be: "An abused husband or wife of a U.S. citizen or green card holder; OR an abused unmarried child (under 21) of a U.S. citizen or green card holder; OR an abused parent of a U.S. citizen"
-    - who_you_can_apply_as: "Special Immigrant Juvenile"
-      who_you_need_to_be: "A child who was abused, abandoned, or neglected by a parent, and who has been placed under the protection of a court"
-    - who_you_can_apply_as: "Abused spouse or child under the Cuban Adjustment Act"
-      who_you_need_to_be: "The abused husband, wife, or child of a Cuban person"
-    - who_you_can_apply_as: "Abused spouse or child under HRIFA"
-      who_you_need_to_be: "The abused husband, wife, or child of a green card holder who got their card through the Haitian Refugee Immigration Fairness Act (HRIFA)"
+      - who_you_can_apply_as: "VAWA self-petitioner (abuse victim)"
+        who_you_need_to_be: "An abused husband or wife of a U.S. citizen or green card holder; OR an abused unmarried child (under 21) of a U.S. citizen or green card holder; OR an abused parent of a U.S. citizen"
+      - who_you_can_apply_as: "Special Immigrant Juvenile"
+        who_you_need_to_be: "A child who was abused, abandoned, or neglected by a parent, and who has been placed under the protection of a court"
+      - who_you_can_apply_as: "Abused spouse or child under the Cuban Adjustment Act"
+        who_you_need_to_be: "The abused husband, wife, or child of a Cuban person"
+      - who_you_can_apply_as: "Abused spouse or child under HRIFA"
+        who_you_need_to_be: "The abused husband, wife, or child of a green card holder who got their card through the Haitian Refugee Immigration Fairness Act (HRIFA)"
     target_timeline: "2.5 to 4 years for the I-360 approval, followed by the I-485 process (timeline varies based on visa availability)."
+    attorney_required_tasks:
+      - "Formulating highly sensitive, confidential filings to block data tracking leaks back to the abuser."
+      - "Structuring complex circumstantial or secondary evidence packages when an abuser intentionally destroys core civil items (passports, birth certificates)."
+      - "Drafting advanced strategic arguments to establish cross-category equity or extreme hardship parameters."
+    independent_sequential_checklist:
+      - step: 1
+        task: "Secure a completely insulated P.O. Box or designated safe third-party mailing address."
+        form_link: "N/A"
+        timeline_notes: "Complete on day 1 before any paperwork touches active processing channels."
+      - step: 2
+        task: "Request official certified copy sheets of domestic violence reports or protective findings from local court clerks."
+        form_link: "N/A"
+        timeline_notes: "Takes 1–2 weeks to secure safely."
+      - step: 3
+        task: "Draft a comprehensive, personal personal declaration detailing the relationship and battery events chronologically."
+        form_link: "N/A"
+        timeline_notes: "Allow 1–2 weeks to edit deliberately and securely."
+      - step: 4
+        task: "Complete Form I-360 and prepare it for delivery."
+        form_link: "https://www.uscis.gov/i-360"
+        timeline_notes: "Route solely via the Vermont Service Center to invoke standard statutory confidentiality locks."
     steps:
       - "Step 1: File Form I-360, self-petition, with evidence of the relationship, abuse, and good moral character."
       - "Step 2: Receive a 'Prima Facie' determination, allowing access to certain public benefits."
@@ -354,6 +553,22 @@ application_types:
     simple_description: "If you have lived in the U.S. continuously since before January 1, 1972, you may be able to apply for a green card through the Registry program — even if you entered without permission or stayed longer than your visa allowed."
     explanation: "Registry is an obscure but powerful provision allowing individuals who have been continuously present in the U.S. since before January 1, 1972, to apply for a green card. It is intended for long-term undocumented individuals. Applicants must demonstrate good moral character and not be deportable on certain severe grounds."
     target_timeline: "1 to 2 years, primarily depending on background checks and local field office interview queues."
+    attorney_required_tasks:
+      - "Performing deep historical immigration and FBI background clearing checks before notifying USCIS of an undocumented presence that dates back past 1972."
+      - "Arguing complex interpretation exceptions for old structural removal configurations or historical deportation entries."
+    independent_sequential_checklist:
+      - step: 1
+        task: "Audit personal archives to extract baseline artifacts (school ledgers, tax histories, local records) that establish continuous physical tracking back past January 1, 1972."
+        form_link: "N/A"
+        timeline_notes: "Allocate 1–3 months for historical record recovery."
+      - step: 2
+        task: "Request comprehensive state and local police clearance records covering every jurisdiction lived in across multiple decades."
+        form_link: "N/A"
+        timeline_notes: "Allow 2–4 weeks for administrative returns."
+      - step: 3
+        task: "Complete Form I-485 directly indicating eligibility path under 'Registry' provisions."
+        form_link: "https://www.uscis.gov/i-485"
+        timeline_notes: "Ensure the processing entry fee ($1,440) is cleanly factored."
     steps:
       - "Step 1: File Form I-485, Adjustment of Status, indicating eligibility under 'Registry'."
       - "Step 2: Submit copious evidence establishing continuous residence since before January 1, 1972."
@@ -399,29 +614,49 @@ application_types:
     simple_description: "A number of special laws and programs give specific groups of people a path to a green card."
     explanation: "This umbrella category includes various specific programs like the Diversity Immigrant Visa Program (Visa Lottery) and the Cuban Adjustment Act. These paths usually depend on the applicant's nationality, specific legislative acts, or luck in a randomized lottery."
     applicants:
-    - who_you_can_apply_as: "Liberian Refugee Immigration Fairness (LRIF)"
-      who_you_need_to_be: "A person from Liberia who has lived continuously in the U.S. since at least November 20, 2014; OR the husband, wife, or child of such a person"
-    - who_you_can_apply_as: "Diversity Immigrant Visa (DV Lottery)"
-      who_you_need_to_be: "Someone who was selected in the U.S. government's annual green card lottery (open to people from countries that send few immigrants to the U.S.)"
-    - who_you_can_apply_as: "Cuban Adjustment Act"
-      who_you_need_to_be: "A person who was born in Cuba or is a Cuban citizen; OR the husband, wife, or child of such a person"
-    - who_you_can_apply_as: "Abused spouse or child under the Cuban Adjustment Act"
-      who_you_need_to_be: "The abused husband, wife, or child of a Cuban person"
-    - who_you_can_apply_as: "Dependent under HRIFA"
-      who_you_need_to_be: "The husband, wife, or child of a green card holder who got their card through the Haitian Refugee Immigration Fairness Act (HRIFA)"
-    - who_you_can_apply_as: "Abused spouse or child under HRIFA"
-      who_you_need_to_be: "The abused husband, wife, or child of a green card holder who got their card through HRIFA"
-    - who_you_can_apply_as: "Lautenberg parolee"
-      who_you_need_to_be: "Someone who was let into the U.S. as a Lautenberg parolee (a special program for certain religious minorities from the former Soviet Union and Southeast Asia)"
-    - who_you_can_apply_as: "Indochinese Parole Adjustment Act of 2000"
-      who_you_need_to_be: "A person from Vietnam, Cambodia, or Laos who was let into the U.S. before October 1, 1997, through a refugee or resettlement program"
-    - who_you_can_apply_as: "American Indian born in Canada"
-      who_you_need_to_be: "A person born in Canada who has at least 50% American Indian ancestry and whose main home is in the U.S."
-    - who_you_can_apply_as: "Person born in the U.S. to a foreign diplomat"
-      who_you_need_to_be: "Someone born in the U.S. whose parent was a foreign diplomat assigned to the U.S. at the time of birth"
-    - who_you_can_apply_as: "Section 13 — diplomat unable to return home"
-      who_you_need_to_be: "A foreign diplomat or high-ranking official who was stationed in the U.S. and cannot safely return to their home country"
+      - who_you_can_apply_as: "Liberian Refugee Immigration Fairness (LRIF)"
+        who_you_need_to_be: "A person from Liberia who has lived continuously in the U.S. since at least November 20, 2014; OR the husband, wife, or child of such a person"
+      - who_you_can_apply_as: "Diversity Immigrant Visa (DV Lottery)"
+        who_you_need_to_be: "Someone who was selected in the U.S. government's annual green card lottery (open to people from countries that send few immigrants to the U.S.)"
+      - who_you_can_apply_as: "Cuban Adjustment Act"
+        who_you_need_to_be: "A person who was born in Cuba or is a Cuban citizen; OR the husband, wife, or child of such a person"
+      - who_you_can_apply_as: "Abused spouse or child under the Cuban Adjustment Act"
+        who_you_need_to_be: "The abused husband, wife, or child of a Cuban person"
+      - who_you_can_apply_as: "Dependent under HRIFA"
+        who_you_need_to_be: "The husband, wife, or child of a green card holder who got their card through the Haitian Refugee Immigration Fairness Act (HRIFA)"
+      - who_you_can_apply_as: "Abused spouse or child under HRIFA"
+        who_you_need_to_be: "The abused husband, wife, or child of a green card holder who got their card through HRIFA"
+      - who_you_can_apply_as: "Lautenberg parolee"
+        who_you_need_to_be: "Someone who was let into the U.S. as a Lautenberg parolee (a special program for certain religious minorities from the former Soviet Union and Southeast Asia)"
+      - who_you_can_apply_as: "Indochinese Parole Adjustment Act of 2000"
+        who_you_need_to_be: "A person from Vietnam, Cambodia, or Laos who was let into the U.S. before October 1, 1997, through a refugee or resettlement program"
+      - who_you_can_apply_as: "American Indian born in Canada"
+        who_you_need_to_be: "A person born in Canada who has at least 50% American Indian ancestry and whose main home is in the U.S."
+      - who_you_can_apply_as: "Person born in the U.S. to a foreign diplomat"
+        who_you_need_to_be: "Someone born in the U.S. whose parent was a foreign diplomat assigned to the U.S. at the time of birth"
+      - who_you_can_apply_as: "Section 13 — diplomat unable to return home"
+        who_you_need_to_be: "A foreign diplomat or high-ranking official who was stationed in the U.S. and cannot safely return to their home country"
     target_timeline: "Varies widely. Diversity Visas must be processed within the fiscal year (fast). Others take 1-3 years."
+    attorney_required_tasks:
+      - "Evaluating cross-chargeability or complex educational equivalence profiles for Diversity Visa lottery winners."
+      - "Handling advanced inadmissibility challenges triggered by historical public charge evaluations or brief, undocumented departures."
+    independent_sequential_checklist:
+      - step: 1
+        task: "Check the official Electronic Diversity Visa portal using your unique confirmation code to verify selection status."
+        form_link: "https://dvprogram.state.gov/"
+        timeline_notes: "Audit tracking portals immediately when results drop in early May."
+      - step: 2
+        task: "Complete and submit Form DS-260 online if you are a lottery winner currently processing outside the United States."
+        form_link: "https://ceac.state.gov/"
+        timeline_notes: "File immediately upon selection; any delay can crash into the absolute September 30 seasonal cut-off."
+      - step: 3
+        task: "For Cuban Adjustment, pull official tracking records to verify 1 solid year of continuous physical presence following a recorded admission or parole window."
+        form_link: "https://i94.cbp.dhs.gov/"
+        timeline_notes: "Can be processed and submitted precisely on day 366."
+      - step: 4
+        task: "File Form I-485 Adjustment packet along with all foundational civil identity records."
+        form_link: "https://www.uscis.gov/i-485"
+        timeline_notes: "Verify the rank tier boundaries before submitting the packet."
     steps:
       - "Step 1: Establish eligibility under the specific sub-category (e.g., winning the DV lottery or being a Cuban native)."
       - "Step 2: File Form I-485 (if in the U.S.) or pursue Consular Processing (if outside)."
