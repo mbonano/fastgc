@@ -16,6 +16,7 @@ const NAV_LINKS = [
   { href: '/', labelKey: 'navHome' as const },
   { href: '/ice', labelKey: 'navIce' as const },
   { href: '/travel', labelKey: 'navTravel' as const },
+  { href: '/rights', labelKey: 'navRights' as const },
 ]
 
 export default function Header() {

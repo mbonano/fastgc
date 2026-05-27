@@ -238,6 +238,11 @@ export const ui = {
     es: 'Viajes y Docs',
     ru: 'Поездки и Документы',
   },
+  navRights: {
+    en: 'Legal Rights',
+    es: 'Derechos Legales',
+    ru: 'Правовые права',
+  },
   borderZoneChecking: {
     en: 'Checking your location…',
     es: 'Verificando su ubicación…',
