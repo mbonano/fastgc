@@ -231,7 +231,7 @@ export const ui = {
   navIce: {
     en: 'ICE & Rights',
     es: 'ICE y Derechos',
-    ru: 'ИДС и Права',
+    ru: 'ICE и Ваши Права',
   },
   navTravel: {
     en: 'Travel & Docs',
