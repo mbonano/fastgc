@@ -1,4 +1,4 @@
-.PHONY: up down logs
+.PHONY: up down logs deploy
 
 up:
 	docker compose up -d
@@ -8,3 +8,8 @@ down:
 
 logs:
 	docker compose logs -f
+
+deploy:
+	docker compose down
+	git pull
+	docker compose up -d
