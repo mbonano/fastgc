@@ -155,11 +155,6 @@ export default function RightsPage() {
           </div>
         </section>
 
-        {/* Disclaimer */}
-        <p className="text-xs text-gray-400 text-center pb-2">
-          {rightsUI.disclaimer[lang]}
-        </p>
-
       </div>
     </main>
   )

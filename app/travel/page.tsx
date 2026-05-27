@@ -192,11 +192,6 @@ export default function TravelPage() {
           </ul>
         </section>
 
-        {/* Disclaimer */}
-        <p className="text-xs text-gray-400 text-center pb-2">
-          {travelUI.disclaimer[lang]}
-        </p>
-
       </div>
     </main>
   )

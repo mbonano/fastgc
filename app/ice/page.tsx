@@ -175,11 +175,6 @@ export default function IcePage() {
           </ul>
         </section>
 
-        {/* Disclaimer */}
-        <p className="text-xs text-gray-400 text-center pb-2">
-          {iceUI.disclaimer[lang]}
-        </p>
-
       </div>
     </main>
   )
