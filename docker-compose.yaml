@@ -1,0 +1,12 @@
+services:
+  fastgc:
+    image: nginx:alpine
+    ports:
+      - "8083:3000"
+    volumes:
+      - .:/usr/share/nginx/html:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.fastgc.rule=Host(`fastgc.chazmar.com`)"
+      - "traefik.http.routers.fastgc.entrypoints=websecure"
+      - "traefik.http.routers.fastgc.tls.certresolver=letsencrypt"

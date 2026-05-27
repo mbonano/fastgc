@@ -15,3 +15,4 @@
     at Object.onIdle (https://d2n4zfio24poj1.cloudfront.net/chatwidget/bundle.js:88:48873)
     at $T.idle (https://d2n4zfio24poj1.cloudfront.net/chatwidget/bundle.js:88:40595)
     at zt (https://d2n4zfio24poj1.cloudfront.net/chatwidget/bundle.js:88:45416) @ https://d2n4zfio24poj1.cloudfront.net/chatwidget/bundle.js:87
+[12950919ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://c.go-mpulse.net/api/config.json?key=A3WTK-PERZP-2W77L-XJ2AR-542NX&d=www.dhs.gov&t=5932511&v=1.815.0&if=&sl=0&si=190d8b7b-b666-4936-a9b9-1f3545f8f41c-tfm87i&plugins=AK,ConfigOverride,Continuity,PageParams,IFrameDelay,AutoXHR,SPA,History,Angular,Backbone,Ember,RT,CrossDomain,BW,PaintTiming,NavigationTiming,ResourceTiming,Memory,CACHE_RELOAD,Errors,TPAnalytics,UserTiming,Akamai,Early,EventTiming,BFCache,LOGN&acao=&ak.ai=102510:0
