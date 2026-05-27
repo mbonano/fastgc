@@ -1,0 +1,328 @@
+field_definitions:
+  can_file_concurrently: "Rationale: Tracking whether an applicant can submit their primary petition (e.g., I-130 or I-140) at the exact same time as their Green Card application (I-485). Being able to file concurrently drastically changes the legal strategy because it allows the applicant to apply for a work permit and travel authorization immediately, rather than waiting years."
+  common_waivers_needed: "Rationale: Qualifying for a category is only step one; many applicants require an accompanying waiver (like an I-601A for unlawful presence or I-601 for fraud/misrepresentation) if they triggered inadmissibility. Tracking the most common waivers associated with each category helps anticipate timeline delays and extra legal steps."
+
+static_elements:
+  header_title: FastGC
+  header_description: "Your simple guide to secure and fast U.S. Green Card applications"
+  body_title: "What is a Green Card?"
+  body_description: "A green card lets you live and work in the United States permanently. To apply, you must qualify under at least one of the categories below. Find the one that fits your situation to learn how to apply and how to speed up the process."
+  footer_disclaimer: |
+    This information is based on official USCIS data and is for general information only — not legal advice. For your specific situation, consult a licensed immigration attorney.
+    Source: USCIS Green Card Eligibility Categories
+
+application_types:
+  - name: "Green Card through Family"
+    simple_description: "You may qualify through a family member who is a U.S. citizen or a green card holder."
+    explanation: "This category allows U.S. citizens and lawful permanent residents to sponsor certain family members for a green card. Immediate relatives of U.S. citizens have special priority and do not have to wait for a visa number. Family preference categories, however, are subject to annual numerical limits and often face significant wait times. This remains the most common pathway for family reunification in the U.S. immigration system."
+    applicants:
+      - who_you_can_apply_as: "Immediate relative of a U.S. citizen"
+        who_you_need_to_be: "The husband or wife of a U.S. citizen; OR a child (unmarried, under 21) of a U.S. citizen; OR a parent of a U.S. citizen who is at least 21 years old."
+      - who_you_can_apply_as: "Other family member (preference categories)"
+        who_you_need_to_be: "An unmarried adult son or daughter of a U.S. citizen; OR a married son or daughter of a U.S. citizen; OR a brother or sister of a U.S. citizen (citizen must be at least 21); OR the husband or wife of a green card holder; OR an unmarried child (under 21) of a green card holder; OR an unmarried adult son or daughter of a green card holder."
+      - who_you_can_apply_as: "Fiancé(e) of a U.S. citizen or their child"
+        who_you_need_to_be: "Someone who entered the U.S. on a K-1 visa to marry a U.S. citizen; OR a child who entered on a K-2 visa as the child of a K-1 fiancé(e)"
+      - who_you_can_apply_as: "Widow or widower of a U.S. citizen"
+        who_you_need_to_be: "Someone whose U.S. citizen spouse died, and who was legally married to that person when they died"
+      - who_you_can_apply_as: "VAWA self-petitioner (abuse victim)"
+        who_you_need_to_be: "An abused husband or wife of a U.S. citizen or green card holder; OR an abused unmarried child (under 21) of a U.S. citizen or green card holder; OR an abused parent of a U.S. citizen."
+    target_timeline: "10-14 months for immediate relatives of U.S. citizens. 2 to 20+ years for family preference categories, depending on the priority date."
+    steps:
+      - "Step 1: Sponsor files Form I-130, Petition for Alien Relative."
+      - "Step 2: If inside the U.S. and eligible, applicant files Form I-485, Adjustment of Status (can be concurrent with I-130 for immediate relatives)."
+      - "Step 3: If outside the U.S., case goes to the National Visa Center (NVC) for consular processing once I-130 is approved and a visa is available."
+      - "Step 4: Attend biometrics appointment."
+      - "Step 5: Attend green card interview at a USCIS office or U.S. Embassy/Consulate."
+      - "Step 6: Receive decision and subsequent Green Card."
+    action_items:
+      - "Confirm the sponsor's U.S. citizenship or lawful permanent resident status with original certificates."
+      - "Obtain certified copies of civil documents establishing the relationship (e.g., marriage certificates, birth certificates)."
+      - "Spouse/Sponsor: Must complete Form I-864 (Affidavit of Support) and provide recent tax returns to prove financial ability."
+      - "Pay filing fees: $675 for online I-130 (or $680 paper), $1,440 for I-485."
+      - "Complete a medical examination by a USCIS-approved civil surgeon (Form I-693)."
+    country_specific_info: "Applicants from Mexico, India, mainland China, and the Philippines generally face much longer wait times in the family preference categories due to per-country visa limits. Immediate relatives of U.S. citizens are not affected by these caps."
+    communication_templates:
+      - recipient: "USCIS"
+        when_to_send: "If the application falls outside normal processing times."
+        template: |
+          Subject: Outside Normal Processing Time Inquiry - Receipt Number [Insert Receipt Number]
+          Dear USCIS Officer,
+          I am writing to inquire about the status of my Form I-130 / I-485, Receipt Number [Receipt Number]. According to the current processing times published on the USCIS website, my case is now outside the normal processing window. Please let me know if any additional information is needed to continue processing my case.
+          Sincerely,
+          [Your Name]
+          [Your A-Number, if applicable]
+    prevention_suggestions:
+      - "Ensure the Form I-864 Affidavit of Support is meticulously completed with current tax transcripts; this is the most common reason for a Request for Evidence (RFE)."
+      - "Submit Form I-693 (Medical Exam) along with the initial I-485 filing to avoid an RFE later in the process."
+    can_file_concurrently: "Yes, for Immediate Relatives of U.S. Citizens. No, for Family Preference categories (unless their priority date is current on the Visa Bulletin)."
+    common_waivers_needed: "I-601A (Provisional Unlawful Presence Waiver) is very common for applicants who entered without inspection and must process abroad. I-601 (Waiver of Grounds of Inadmissibility) for fraud or criminal issues."
+
+  - name: "Green Card through Employment"
+    simple_description: "You may qualify because of your job skills, education, or investment in the U.S. economy."
+    explanation: "This pathway is for foreign nationals seeking permanent residence based on their job skills, education, or investment. It is divided into five preference categories (EB-1 through EB-5). Most employment categories require a U.S. employer to sponsor the applicant and obtain a labor certification. Self-petitioning is only available for specific EB-1, National Interest Waiver (EB-2), and EB-5 categories."
+    applicants:
+    - who_you_can_apply_as: "Immigrant worker — Priority (EB-1)" 
+      who_you_need_to_be: "Someone with extraordinary ability in science, arts, education, business, or sports; OR an outstanding professor or researcher; OR a top-level manager or executive at a multinational company"
+    - who_you_can_apply_as: "Immigrant worker — Advanced degree or exceptional ability (EB-2)"
+      who_you_need_to_be: "Someone whose job requires an advanced degree (master's or higher); OR someone with exceptional ability in science, arts, or business; OR a person seeking a national interest waiver (your work greatly benefits the U.S.)"
+    - who_you_can_apply_as: "Immigrant worker — Skilled, professional, or unskilled (EB-3)"
+      who_you_need_to_be: "A skilled worker (job requires at least 2 years of training or experience); OR a professional (job requires at least a 4-year U.S. bachelor's degree); OR an unskilled worker (job requires less than 2 years of training)"
+    - who_you_can_apply_as: "Physician National Interest Waiver"
+      who_you_need_to_be: "A doctor who agrees to work full-time in a medically underserved area in the U.S. for a set period of time"
+    - who_you_can_apply_as: "Immigrant investor (EB-5)"
+      who_you_need_to_be: "Someone who has invested (or is in the process of investing) at least $1,050,000 in a new U.S. business that creates full-time jobs for at least 10 workers (investment can be $800,000 if the business is in a low-employment or rural area)"
+    target_timeline: "1.5 to 3 years for most categories if priority date is current. Can exceed 10+ years for applicants from backlogged countries."
+    steps:
+      - "Step 1: Employer obtains Prevailing Wage Determination and conducts recruitment (if PERM Labor Certification is required)."
+      - "Step 2: Employer files PERM Labor Certification with the Department of Labor."
+      - "Step 3: Employer files Form I-140, Immigrant Petition for Alien Worker."
+      - "Step 4: Applicant files Form I-485 when the priority date becomes current."
+      - "Step 5: Attend biometrics and, if scheduled, an interview."
+    action_items:
+      - "Confirm applicant's educational credentials and secure foreign degree evaluations if necessary."
+      - "Employer: Gather corporate tax returns to demonstrate the ability to pay the proffered wage from the priority date onward."
+      - "Pay filing fees: $715 for I-140, $1,440 for I-485. Optional $2,805 for Premium Processing of I-140."
+      - "Obtain employment verification letters from previous employers to prove required experience."
+    country_specific_info: "Severe retrogression exists for Indian and Chinese nationals in the EB-2 and EB-3 categories. Wait times for these individuals can stretch over a decade."
+    communication_templates:
+      - recipient: "Employer's HR or Immigration Counsel"
+        when_to_send: "Before the priority date becomes current, to prepare for I-485 filing."
+        template: |
+          Subject: Preparation for Adjustment of Status (I-485) Filing
+          Dear [Name],
+          I have been monitoring the monthly Visa Bulletin, and my priority date of [Date] is approaching the current cut-off date for my category. I would like to proactively gather the required documents (medical exam, birth certificates, etc.) for my Form I-485 filing. Could you please provide a checklist so we can file as soon as the date is current?
+          Thank you,
+          [Your Name]
+    prevention_suggestions:
+      - "Maintain valid nonimmigrant status (e.g., H-1B, L-1) throughout the process to ensure eligibility for Adjustment of Status."
+      - "If changing employers after filing I-485, ensure the new job falls under the 'same or similar' occupational classification to invoke AC21 portability."
+    can_file_concurrently: "Yes, if the priority date is current under the Final Action Dates or Dates for Filing chart (depending on USCIS's monthly determination). Not possible if the category is backlogged."
+    common_waivers_needed: "Waivers are less common here. I-601 for fraud or criminal issues, but unlawful presence waivers (I-601A) are extremely difficult to use since employment-based applicants usually require maintaining lawful status."
+
+  - name: "Green Card as a Special Immigrant"
+    simple_description: "Certain groups of people have their own special path to a green card."
+    explanation: "This category covers specialized groups, including religious workers, Special Immigrant Juveniles (SIJ), and Afghan or Iraqi nationals who assisted the U.S. government. Each sub-group has highly specific eligibility requirements. It operates under the fourth employment preference (EB-4) category."
+    applicants:
+    - who_you_can_apply_as: "Religious worker"	
+      who_you_need_to_be: "A minister or other religious worker who is coming to the U.S. to work for a nonprofit religious organization"
+    - who_you_can_apply_as: "Special Immigrant Juvenile"
+      who_you_need_to_be: "A young person (under 21) who was abused, abandoned, or neglected by a parent, and who has a court order protecting them"
+    - who_you_can_apply_as: "Afghan or Iraqi national"
+      who_you_need_to_be: "An Afghan or Iraqi person who worked as a translator or interpreter for the U.S. government; OR an Iraqi person who worked for the U.S. government in Iraq for at least 1 year after March 20, 2003; OR an Afghan person who worked for the U.S. government or NATO forces (ISAF)"
+    - who_you_can_apply_as: "International broadcaster"
+      who_you_need_to_be: "Someone coming to the U.S. to work in media for the U.S. Agency for Global Media (USAGM) or a USAGM partner organization"
+    - who_you_can_apply_as: "International organization or NATO employee (or their family)"
+      who_you_need_to_be: "A retired officer or employee of a qualifying international organization or NATO; OR an eligible family member of such a person"
+    target_timeline: "1 to 3 years, depending on the specific sub-category and EB-4 visa availability."
+    steps:
+      - "Step 1: File Form I-360, Petition for Amerasian, Widow(er), or Special Immigrant."
+      - "Step 2: Obtain approval of the I-360 petition."
+      - "Step 3: File Form I-485 to adjust status or proceed via consular processing."
+      - "Step 4: Attend biometrics and final interview."
+    action_items:
+      - "Verify specific category requirements (e.g., SIJs need a qualifying state juvenile court order prior to filing)."
+      - "Gather specialized evidence (e.g., proof of non-profit status for religious organizations, or U.S. military employment letters for translators)."
+      - "Confirm fee exemptions, as many Special Immigrant categories (like SIJ or Afghan/Iraqi translators) do not pay standard filing fees."
+    country_specific_info: "The EB-4 category has faced broader backlogs recently affecting applicants globally, particularly from El Salvador, Guatemala, Honduras, and Mexico."
+    communication_templates:
+      - recipient: "State Juvenile Court (for SIJ applicants)"
+        when_to_send: "To initiate the state court proceedings before the applicant turns 18 or 21 (depending on state law)."
+        template: |
+          Subject: Petition for Predicate Order for Special Immigrant Juvenile Status
+          Dear Honorable Court,
+          We are filing the attached petition seeking a predicate order declaring that [Child's Name] is dependent on the court and that reunification with one or both parents is not viable due to abuse, neglect, or abandonment. This order is a time-sensitive prerequisite for federal immigration relief.
+          Respectfully,
+          [Your Name/Attorney]
+    prevention_suggestions:
+      - "For SIJs, age-out rules are extremely strict; ensure the I-360 is filed before the applicant's 21st birthday."
+      - "For religious workers, the sponsoring organization must have its R-1/EB-4 tax-exempt documentation meticulously prepared to avoid fraud investigations."
+    can_file_concurrently: "Generally No for SIJ (unless a visa is immediately available, which is rare due to EB-4 backlogs). Sometimes Yes for Religious Workers if the priority date is current."
+    common_waivers_needed: "I-601 is commonly used for SIJ applicants to waive various inadmissibilities (like unlawful entry or minor juvenile infractions) using the generous SIJ-specific waiver standard."
+
+  - name: "Green Card through Refugee or Asylee Status"
+    simple_description: "If you came to the U.S. as a refugee or were granted asylum, you can apply for a green card after one year."
+    explanation: "Foreign nationals admitted to the U.S. as refugees or granted asylum are required (refugees) or eligible (asylees) to apply for a green card after one year of physical presence in the United States. This category provides a permanent safe haven for those who fled persecution. Derivatives (spouses and children) granted status along with the principal can also adjust."
+    applicants:
+    - who_you_can_apply_as: "Asylee"
+      who_you_need_to_be: "Someone who was granted asylum in the U.S. at least 1 year ago"
+    - who_you_can_apply_as: "Refugee"
+      who_you_need_to_be: "Someone who entered the U.S. as a refugee at least 1 year ago"
+    target_timeline: "1.5 to 2.5 years for the I-485 application to be processed, depending heavily on security background checks."
+    steps:
+      - "Step 1: Accumulate one year of physical presence in the U.S. after being admitted as a refugee or granted asylum."
+      - "Step 2: File Form I-485, Application to Register Permanent Residence."
+      - "Step 3: Attend biometrics appointment."
+      - "Step 4: Complete the medical exam (Form I-693)."
+    action_items:
+      - "Confirm one full year of physical presence; track all international travel after being granted status."
+      - "Obtain proof of asylee or refugee status (e.g., I-94, Asylum approval letter, or Immigration Judge order)."
+      - "Refugees: Pay no fee for the I-485 application. Asylees: Pay the $1,440 fee or submit a fee waiver (Form I-912)."
+    country_specific_info: "There are no per-country visa caps for asylees and refugees adjusting status. However, background checks can sometimes cause delays for applicants from regions with complex security concerns."
+    communication_templates:
+      - recipient: "USCIS"
+        when_to_send: "If an I-485 has been pending for an extensively long time, often due to security checks."
+        template: |
+          Subject: Case Inquiry - Asylee Adjustment of Status (Receipt Number [Insert Number])
+          Dear USCIS Officer,
+          I am requesting an update on my Form I-485, which has been pending for over [number] months. As an asylee, I understand that background checks take time, but my case is now well outside the published processing times. Could you please advise if there is any further documentation I can provide to assist in concluding the review of my application?
+          Sincerely,
+          [Your Name]
+    prevention_suggestions:
+      - "Ensure you have not engaged in any conduct that would make you removable or trigger inadmissibility."
+      - "Do not travel outside the U.S. without first obtaining a Refugee Travel Document, as doing so might risk your status."
+    can_file_concurrently: "Not applicable. The status (asylee/refugee) must be held for 1 year before filing the I-485."
+    common_waivers_needed: "Form I-602 (Application by Refugee for Waiver of Inadmissibility Grounds) for medical, criminal, or other grounds of inadmissibility. This waiver is much broader and more forgiving than the I-601."
+
+  - name: "Green Card for Human Trafficking and Crime Victims"
+    simple_description: "If you are a victim of trafficking or certain crimes and you helped law enforcement, you may be able to get a green card."
+    explanation: "This category allows individuals who have been granted T nonimmigrant status (trafficking victims) or U nonimmigrant status (crime victims) to adjust to permanent resident status. These pathways are designed to protect vulnerable individuals who have cooperated with U.S. law enforcement. It requires continuous physical presence in the U.S. for a specified period."
+    applicants:
+    - who_you_can_apply_as: "Human trafficking victim"
+      who_you_need_to_be: "Someone who currently has a T visa (given to victims of human trafficking)"
+    - who_you_can_apply_as: "Crime victim"
+      who_you_need_to_be: "Someone who currently has a U visa (given to victims of certain crimes who helped police or prosecutors)"
+    target_timeline: "1.5 to 2.5 years after filing the adjustment application. The wait for the underlying U visa currently exceeds 5+ years."
+    steps:
+      - "Step 1: Hold valid T or U nonimmigrant status and meet the physical presence requirement (usually 3 years)."
+      - "Step 2: File Form I-485, Adjustment of Status."
+      - "Step 3: Provide evidence of ongoing cooperation with law enforcement (for U visa) or compliance with assistance requests (for T visa)."
+      - "Step 4: Provide evidence of good moral character."
+    action_items:
+      - "Obtain a newly signed certification or letter from the certifying law enforcement agency confirming ongoing cooperation."
+      - "Gather affidavits and evidence demonstrating continuous physical presence in the U.S."
+      - "Request a fee waiver (Form I-912) as most U and T adjusters are eligible to waive the I-485 fee."
+    country_specific_info: "No country-specific caps apply, but the overall statutory limit of 10,000 U visas per year causes massive backlogs at the initial nonimmigrant stage."
+    communication_templates:
+      - recipient: "Law Enforcement Agency/Prosecutor"
+        when_to_send: "3-4 months prior to filing the I-485 application."
+        template: |
+          Subject: Request for Confirmation of Cooperation for U-Visa Adjustment
+          Dear [Officer/Prosecutor Name],
+          I was previously granted a U-visa based on my assistance in case [Case Number]. I am preparing to apply for my Green Card and kindly request a brief letter confirming that I have not unreasonably refused to provide assistance in the criminal investigation or prosecution since the issuance of my U-visa. 
+          Thank you for your ongoing support.
+          Sincerely,
+          [Your Name]
+    prevention_suggestions:
+      - "Never depart the United States without explicit authorization (Advance Parole) while in U or T status, as it breaks the continuous physical presence requirement."
+      - "Compile extensive tax and police records to affirmatively prove good moral character."
+    can_file_concurrently: "Not applicable. The U or T status must be held for the required physical presence period (typically 3 years) before filing the I-485."
+    common_waivers_needed: "Form I-192 (Application for Advance Permission to Enter as a Nonimmigrant) is filed during the initial U/T stage to waive almost any inadmissibility. Rarely is a waiver needed at the Green Card stage if previously waived."
+
+  - name: "Green Card for Victims of Abuse (VAWA)"
+    simple_description: "If you have been abused or hurt by someone in your family and you are living in the U.S., there may be a way for you to get a green card without your abuser's help."
+    explanation: "Under the Violence Against Women Act (VAWA), abused spouses, children, and parents of U.S. citizens or lawful permanent residents can self-petition for a green card. This allows victims to seek safety and independence without the abuser's knowledge. It applies to all genders, despite the name of the act."
+    applicants:
+    - who_you_can_apply_as: "VAWA self-petitioner (abuse victim)"
+      who_you_need_to_be: "An abused husband or wife of a U.S. citizen or green card holder; OR an abused unmarried child (under 21) of a U.S. citizen or green card holder; OR an abused parent of a U.S. citizen"
+    - who_you_can_apply_as: "Special Immigrant Juvenile"
+      who_you_need_to_be: "A child who was abused, abandoned, or neglected by a parent, and who has been placed under the protection of a court"
+    - who_you_can_apply_as: "Abused spouse or child under the Cuban Adjustment Act"
+      who_you_need_to_be: "The abused husband, wife, or child of a Cuban person"
+    - who_you_can_apply_as: "Abused spouse or child under HRIFA"
+      who_you_need_to_be: "The abused husband, wife, or child of a green card holder who got their card through the Haitian Refugee Immigration Fairness Act (HRIFA)"
+    target_timeline: "2.5 to 4 years for the I-360 approval, followed by the I-485 process (timeline varies based on visa availability)."
+    steps:
+      - "Step 1: File Form I-360, self-petition, with evidence of the relationship, abuse, and good moral character."
+      - "Step 2: Receive a 'Prima Facie' determination, allowing access to certain public benefits."
+      - "Step 3: Once the I-360 is approved and a visa is available, file Form I-485 to adjust status."
+      - "Step 4: Attend biometrics and an interview (if not waived)."
+    action_items:
+      - "Establish strict confidentiality protocols; ensure USCIS has a safe mailing address."
+      - "Collect police reports, medical records, or psychological evaluations proving extreme cruelty or battery."
+      - "Obtain police clearance letters from every place lived in the past 3 years to prove good moral character."
+    country_specific_info: "Wait times for the I-485 stage align with family-based priority dates if the abuser is a permanent resident. If the abuser is a U.S. citizen, the visa is immediately available."
+    communication_templates:
+      - recipient: "Psychologist/Medical Professional"
+        when_to_send: "At the beginning of evidence gathering for the I-360 petition."
+        template: |
+          Subject: Request for VAWA Evaluation
+          Dear Dr. [Name],
+          I am currently working on an immigration case under the VAWA provisions for victims of domestic abuse. I am reaching out to schedule a psychological evaluation to document the emotional and psychological impact of the extreme cruelty I experienced. Your detailed report will serve as critical evidence for my self-petition.
+          Thank you,
+          [Your Name]
+    prevention_suggestions:
+      - "Do not use your home address on any USCIS forms if you still live with or are hiding from the abuser; use a trusted attorney or P.O. Box."
+      - "Ensure the evidence of a good faith marriage is exceptionally strong, as USCIS scrutinizes this heavily."
+    can_file_concurrently: "Yes, if the abuser is a U.S. Citizen. If the abuser is a Lawful Permanent Resident, concurrent filing is only allowed if the family preference priority date is current."
+    common_waivers_needed: "VAWA applicants have special exemptions for unlawful presence and unauthorized work. If waivers are needed for criminal or fraud issues, an I-601 is used with a specialized 'extreme hardship' standard for VAWA self-petitioners."
+
+  - name: "Green Card through Registry"
+    simple_description: "If you have lived in the U.S. continuously since before January 1, 1972, you may be able to apply for a green card through the Registry program — even if you entered without permission or stayed longer than your visa allowed."
+    explanation: "Registry is an obscure but powerful provision allowing individuals who have been continuously present in the U.S. since before January 1, 1972, to apply for a green card. It is intended for long-term undocumented individuals. Applicants must demonstrate good moral character and not be deportable on certain severe grounds."
+    target_timeline: "1 to 2 years, primarily depending on background checks and local field office interview queues."
+    steps:
+      - "Step 1: File Form I-485, Adjustment of Status, indicating eligibility under 'Registry'."
+      - "Step 2: Submit copious evidence establishing continuous residence since before January 1, 1972."
+      - "Step 3: Attend biometrics appointment."
+      - "Step 4: Attend an interview with a USCIS officer to review historical evidence."
+    action_items:
+      - "Gather chronological documentation (rent receipts, tax returns, bank statements, affidavits) for every single year since 1972."
+      - "Submit Form I-485 and pay the $1,440 fee."
+      - "Obtain police clearances to establish good moral character."
+    country_specific_info: "There are no per-country visa limits for Registry applicants. Nationality is largely irrelevant as long as the 1972 cutoff is met."
+    communication_templates:
+      - recipient: "Historical Employer or Landlord"
+        when_to_send: "During the initial phase of gathering 1970s/1980s documentary evidence."
+        template: |
+          Subject: Request for Affidavit/Records of Residence
+          Dear [Name or Institution],
+          I am preparing an application for U.S. permanent residency based on my continuous presence in the U.S. since before 1972. I request a sworn affidavit or copies of any archival records you may have confirming my employment/residency with you during the period of [Year] to [Year]. This evidence is crucial for my case.
+          Thank you,
+          [Your Name]
+    prevention_suggestions:
+      - "Any prolonged departures from the U.S. can break the 'continuous residence' requirement; prepare to explain any trips outside the U.S."
+      - "Do not rely solely on affidavits; objective documentary evidence is vital for older periods."
+    can_file_concurrently: "Yes, the I-485 is filed directly as the primary application; there is no underlying petition like an I-130 or I-140."
+    common_waivers_needed: "Registry applicants are statutorily exempt from many inadmissibility grounds (like unlawful entry or being a public charge). Criminal waivers (I-601) may be needed for specific offenses not barred by the 'good moral character' requirement."
+
+  - name: "Green Card through Other Categories"
+    simple_description: "A number of special laws and programs give specific groups of people a path to a green card."
+    explanation: "This umbrella category includes various specific programs like the Diversity Immigrant Visa Program (Visa Lottery) and the Cuban Adjustment Act. These paths usually depend on the applicant's nationality, specific legislative acts, or luck in a randomized lottery."
+    applicants:
+    - who_you_can_apply_as: "Liberian Refugee Immigration Fairness (LRIF)"
+      who_you_need_to_be: "A person from Liberia who has lived continuously in the U.S. since at least November 20, 2014; OR the husband, wife, or child of such a person"
+    - who_you_can_apply_as: "Diversity Immigrant Visa (DV Lottery)"
+      who_you_need_to_be: "Someone who was selected in the U.S. government's annual green card lottery (open to people from countries that send few immigrants to the U.S.)"
+    - who_you_can_apply_as: "Cuban Adjustment Act"
+      who_you_need_to_be: "A person who was born in Cuba or is a Cuban citizen; OR the husband, wife, or child of such a person"
+    - who_you_can_apply_as: "Abused spouse or child under the Cuban Adjustment Act"
+      who_you_need_to_be: "The abused husband, wife, or child of a Cuban person"
+    - who_you_can_apply_as: "Dependent under HRIFA"
+      who_you_need_to_be: "The husband, wife, or child of a green card holder who got their card through the Haitian Refugee Immigration Fairness Act (HRIFA)"
+    - who_you_can_apply_as: "Abused spouse or child under HRIFA"
+      who_you_need_to_be: "The abused husband, wife, or child of a green card holder who got their card through HRIFA"
+    - who_you_can_apply_as: "Lautenberg parolee"
+      who_you_need_to_be: "Someone who was let into the U.S. as a Lautenberg parolee (a special program for certain religious minorities from the former Soviet Union and Southeast Asia)"
+    - who_you_can_apply_as: "Indochinese Parole Adjustment Act of 2000"
+      who_you_need_to_be: "A person from Vietnam, Cambodia, or Laos who was let into the U.S. before October 1, 1997, through a refugee or resettlement program"
+    - who_you_can_apply_as: "American Indian born in Canada"
+      who_you_need_to_be: "A person born in Canada who has at least 50% American Indian ancestry and whose main home is in the U.S."
+    - who_you_can_apply_as: "Person born in the U.S. to a foreign diplomat"
+      who_you_need_to_be: "Someone born in the U.S. whose parent was a foreign diplomat assigned to the U.S. at the time of birth"
+    - who_you_can_apply_as: "Section 13 — diplomat unable to return home"
+      who_you_need_to_be: "A foreign diplomat or high-ranking official who was stationed in the U.S. and cannot safely return to their home country"
+    target_timeline: "Varies widely. Diversity Visas must be processed within the fiscal year (fast). Others take 1-3 years."
+    steps:
+      - "Step 1: Establish eligibility under the specific sub-category (e.g., winning the DV lottery or being a Cuban native)."
+      - "Step 2: File Form I-485 (if in the U.S.) or pursue Consular Processing (if outside)."
+      - "Step 3: Attend biometrics and/or medical examinations."
+      - "Step 4: Complete the green card interview."
+    action_items:
+      - "Diversity Visa: Must rapidly submit DS-260 and track visa bulletin, as the visa must be issued before September 30 of that fiscal year."
+      - "Cuban Adjustment: Must prove one year of physical presence after a lawful admission or parole into the U.S."
+      - "Pay associated category-specific fees."
+    country_specific_info: "Diversity Visas are only available to countries with historically low rates of immigration to the U.S. (excluding countries like India, China, Mexico)."
+    communication_templates:
+      - recipient: "Kentucky Consular Center (KCC) - For Diversity Visa"
+        when_to_send: "If you submitted the DS-260 and your lottery rank number is current, but you haven't received an interview notice."
+        template: |
+          Subject: Inquiry Regarding DV Interview Scheduling - Case Number [Insert Case Number]
+          Dear KCC,
+          I am a Diversity Visa selectee for Fiscal Year [Year]. My case number is [Case Number]. According to the recent Visa Bulletin, my number is current. I submitted my DS-260 on [Date]. Due to the strict September 30 deadline for visa issuance, I am inquiring if my case is ready to be scheduled for an interview.
+          Sincerely,
+          [Your Name]
+    prevention_suggestions:
+      - "For Diversity Visas, time is of the essence; failing to finalize the process by September 30 results in total forfeiture of the green card."
+      - "Under the Cuban Adjustment Act, ensure that your initial entry was fully documented as a valid 'admission or parole'."
+    can_file_concurrently: "Yes, for Diversity Visa winners, the I-485 can be filed immediately once the rank number is current. For Cuban Adjustment, the I-485 is filed directly after 1 year of physical presence."
+    common_waivers_needed: "Standard I-601 or I-601A waivers apply, depending on the specific path. Diversity Visa applicants are strictly scrutinized and often require waivers for prior misrepresentations or unlawful presence if attempting to adjust."

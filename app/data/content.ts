@@ -66,6 +66,123 @@ export const ui = {
     ru: 'Источник: Категории права на получение грин-карты USCIS',
   },
   languageLabel: { en: 'Language', es: 'Idioma', ru: 'Язык' },
+
+  // Session landing
+  sessionTitle: {
+    en: 'Welcome to FastGC',
+    es: 'Bienvenido a FastGC',
+    ru: 'Добро пожаловать в FastGC',
+  },
+  sessionSubtitle: {
+    en: 'Your step-by-step guide to U.S. Green Card applications. Your selections are saved so you can pick up where you left off.',
+    es: 'Su guía paso a paso para solicitudes de Tarjeta Verde de los EE.UU. Sus selecciones se guardan para que pueda continuar donde lo dejó.',
+    ru: 'Пошаговое руководство по заявлению на грин-карту США. Ваши выборы сохраняются, чтобы вы могли продолжить с того места, где остановились.',
+  },
+  newSession: {
+    en: 'Start New Session',
+    es: 'Iniciar Nueva Sesión',
+    ru: 'Начать новую сессию',
+  },
+  resumeSession: {
+    en: 'Resume Session',
+    es: 'Reanudar Sesión',
+    ru: 'Продолжить сессию',
+  },
+  resumeSessionHint: {
+    en: 'Continue from your last saved selections',
+    es: 'Continuar desde sus últimas selecciones guardadas',
+    ru: 'Продолжить с последних сохранённых выборов',
+  },
+  noSavedSession: {
+    en: 'No saved session found',
+    es: 'No se encontró sesión guardada',
+    ru: 'Сохранённая сессия не найдена',
+  },
+
+  // Page 1
+  selectInstruction: {
+    en: 'Select any and all green card application types that apply to your situation.',
+    es: 'Seleccione todos los tipos de solicitud de tarjeta verde que apliquen a su situación.',
+    ru: 'Выберите все типы заявлений на грин-карту, которые применимы к вашей ситуации.',
+  },
+  nextButton: {
+    en: 'Next →',
+    es: 'Siguiente →',
+    ru: 'Далее →',
+  },
+  nextButtonHint: {
+    en: 'Select at least one category to continue',
+    es: 'Seleccione al menos una categoría para continuar',
+    ru: 'Выберите хотя бы одну категорию для продолжения',
+  },
+  backButton: {
+    en: '← Back',
+    es: '← Atrás',
+    ru: '← Назад',
+  },
+
+  // Expanded accordion labels
+  targetTimeline: {
+    en: 'Target Timeline',
+    es: 'Plazo Estimado',
+    ru: 'Ориентировочные сроки',
+  },
+  canFileConcurrently: {
+    en: 'Can You File Concurrently?',
+    es: '¿Puede Presentar Simultáneamente?',
+    ru: 'Можно ли подавать одновременно?',
+  },
+  commonWaivers: {
+    en: 'Common Waivers Needed',
+    es: 'Renuncias Comunes Necesarias',
+    ru: 'Часто требуемые освобождения',
+  },
+  whoCanApplyAs: {
+    en: 'Who you can apply as',
+    es: 'Cómo puede solicitar',
+    ru: 'Кем вы можете подать заявку',
+  },
+  whoNeedToBe: {
+    en: 'Who you need to be',
+    es: 'Quién debe ser usted',
+    ru: 'Кем вы должны быть',
+  },
+
+  // Page 2 detail labels
+  steps: { en: 'Steps', es: 'Pasos', ru: 'Шаги' },
+  actionItems: { en: 'Action Items', es: 'Elementos de Acción', ru: 'Действия' },
+  countrySpecificInfo: {
+    en: 'Country-Specific Information',
+    es: 'Información Específica por País',
+    ru: 'Информация по стране',
+  },
+  preventionTips: {
+    en: 'Prevention Tips',
+    es: 'Consejos de Prevención',
+    ru: 'Советы по предотвращению',
+  },
+  communicationTemplates: {
+    en: 'Communication Templates',
+    es: 'Plantillas de Comunicación',
+    ru: 'Шаблоны коммуникации',
+  },
+  recipient: { en: 'Recipient', es: 'Destinatario', ru: 'Получатель' },
+  whenToSend: { en: 'When to send', es: 'Cuándo enviar', ru: 'Когда отправлять' },
+  downloadPdf: {
+    en: 'Download PDF',
+    es: 'Descargar PDF',
+    ru: 'Скачать PDF',
+  },
+  detailsPageTitle: {
+    en: 'Your Green Card Application Guide',
+    es: 'Su Guía de Solicitud de Tarjeta Verde',
+    ru: 'Руководство по заявлению на грин-карту',
+  },
+  whoCanApply: {
+    en: 'Who can apply',
+    es: 'Quién puede solicitar',
+    ru: 'Кто может подать заявку',
+  },
 } satisfies Record<string, T>
 
 export const categories: AnyGroup[] = [
