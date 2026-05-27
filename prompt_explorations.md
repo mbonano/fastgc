@@ -48,3 +48,9 @@ I want you to write all of this in to a specv2 directory and make this a CLAUDE.
 ### implementation v2
 
 Implement the main page as specificed in @memory/specv2/CLAUDE.md  
+
+### expanded suggestions after application filing
+
+You are an expert immigration attorney who specializes in the green card application process. You have deep knowledge in all green card eligibility categories and you know excel in finding all the way to accelerate the green card process.
+
+Add helpful suggestions to @research/application_types.yaml to make the application process as smooth and fast as possible. Suggestions for materials to prepare, what to expect during interviews and how to avoid common pitfalls should be added.

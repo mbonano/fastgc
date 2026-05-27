@@ -137,6 +137,16 @@ export const ui = {
     es: 'Renuncias Comunes Necesarias',
     ru: 'Часто требуемые освобождения',
   },
+  canFileConcurrentlyTooltip: {
+    en: 'Tracking whether an applicant can submit their primary petition (e.g., I-130 or I-140) at the exact same time as their Green Card application (I-485). Being able to file concurrently drastically changes the legal strategy because it allows the applicant to apply for a work permit and travel authorization immediately, rather than waiting years.',
+    es: 'Seguimiento de si un solicitante puede presentar su petición principal (p. ej., I-130 o I-140) exactamente al mismo tiempo que su solicitud de tarjeta verde (I-485). Poder presentar de forma simultánea cambia drásticamente la estrategia legal porque permite al solicitante solicitar un permiso de trabajo y autorización de viaje de inmediato, en lugar de esperar años.',
+    ru: 'Отслеживание того, может ли заявитель подать основную петицию (например, I-130 или I-140) одновременно с заявлением на грин-карту (I-485). Возможность одновременной подачи кардинально меняет правовую стратегию, поскольку позволяет сразу подать заявление на разрешение на работу и разрешение на въезд, не ожидая годами.',
+  },
+  commonWaiversTooltip: {
+    en: 'Qualifying for a category is only step one; many applicants require an accompanying waiver (like an I-601A for unlawful presence or I-601 for fraud/misrepresentation) if they triggered inadmissibility. Tracking the most common waivers associated with each category helps anticipate timeline delays and extra legal steps.',
+    es: 'Calificar para una categoría es solo el primer paso; muchos solicitantes requieren una exención adicional (como un I-601A por presencia ilegal o I-601 por fraude/tergiversación) si activaron causas de inadmisibilidad. Conocer las exenciones más comunes asociadas a cada categoría ayuda a anticipar demoras y pasos legales adicionales.',
+    ru: 'Соответствие категории — лишь первый шаг; многие заявители нуждаются в дополнительном освобождении (например, I-601A при незаконном присутствии или I-601 при мошенничестве), если возникли основания для недопустимости. Отслеживание наиболее распространённых освобождений помогает заранее предвидеть задержки и дополнительные правовые шаги.',
+  },
   whoCanApplyAs: {
     en: 'Who you can apply as',
     es: 'Cómo puede solicitar',
@@ -160,6 +170,16 @@ export const ui = {
     en: 'Prevention Tips',
     es: 'Consejos de Prevención',
     ru: 'Советы по предотвращению',
+  },
+  interviewPrep: {
+    en: 'Interview Preparation',
+    es: 'Preparación para la Entrevista',
+    ru: 'Подготовка к собеседованию',
+  },
+  accelerationTips: {
+    en: 'Acceleration Tips',
+    es: 'Consejos para Acelerar',
+    ru: 'Советы по ускорению',
   },
   communicationTemplates: {
     en: 'Communication Templates',

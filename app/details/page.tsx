@@ -10,12 +10,47 @@ import type { ApplicationType, Lang } from '../../lib/applicationData'
 
 // ─── Sub-components ──────────────────────────────────────────────────────────
 
-function InfoBlock({ label, value }: { label: string; value: string }) {
+function InfoTooltip({ text }: { text: string }) {
   return (
-    <div className="bg-gray-50 rounded-lg px-4 py-3">
-      <p className="text-xs font-semibold text-brand uppercase tracking-wide mb-1">{label}</p>
+    <span className="relative group inline-flex items-center cursor-help">
+      <svg className="w-3.5 h-3.5 text-brand opacity-60 group-hover:opacity-100 transition-opacity" viewBox="0 0 20 20" fill="currentColor">
+        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+      </svg>
+      <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-72 px-3 py-2 text-xs text-white bg-gray-800 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 leading-relaxed">
+        {text}
+        <span className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-800" />
+      </span>
+    </span>
+  )
+}
+
+type InfoBlockVariant = 'blue' | 'amber' | 'emerald' | 'orange'
+
+const infoBlockStyles: Record<InfoBlockVariant, { wrap: string; label: string }> = {
+  blue:    { wrap: 'bg-blue-50 border-l-4 border-blue-300 rounded-lg px-4 py-3',    label: 'text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1' },
+  amber:   { wrap: 'bg-amber-50 border-l-4 border-amber-400 rounded-lg px-4 py-3',  label: 'text-xs font-semibold text-amber-700 uppercase tracking-wide mb-1' },
+  emerald: { wrap: 'bg-emerald-50 border-l-4 border-emerald-500 rounded-lg px-4 py-3', label: 'text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1' },
+  orange:  { wrap: 'bg-orange-50 border-l-4 border-orange-400 rounded-lg px-4 py-3', label: 'text-xs font-semibold text-orange-700 uppercase tracking-wide mb-1' },
+}
+
+function InfoBlock({ label, value, tooltip, variant }: { label: string; value: string; tooltip?: string; variant: InfoBlockVariant }) {
+  const s = infoBlockStyles[variant]
+  return (
+    <div className={s.wrap}>
+      <div className="flex items-center gap-1.5 mb-1">
+        <p className={s.label}>{label}</p>
+        {tooltip && <InfoTooltip text={tooltip} />}
+      </div>
       <p className="text-sm text-gray-700 leading-relaxed">{value}</p>
     </div>
+  )
+}
+
+function SectionHeader({ label, color }: { label: string; color: string }) {
+  return (
+    <h3 className={`text-xs font-semibold uppercase tracking-wide mb-3 ${color}`}>
+      {label}
+    </h3>
   )
 }
 
@@ -35,16 +70,17 @@ function DetailCard({ appType, lang, checkedItems, onToggleAction }: DetailCardP
         <p className="text-green-200 text-sm mt-1">{appType.simpleDescription[lang]}</p>
       </div>
 
-      <div className="px-6 py-6 space-y-7">
-        {/* Explanation */}
-        <p className="text-gray-700 leading-relaxed">{appType.explanation[lang]}</p>
+      <div className="divide-y divide-gray-100">
 
-        {/* Who can apply table */}
+        {/* Explanation */}
+        <div className="px-6 py-5">
+          <p className="text-gray-700 leading-relaxed">{appType.explanation[lang]}</p>
+        </div>
+
+        {/* Who can apply */}
         {appType.applicants.length > 0 && (
-          <div>
-            <h3 className="text-sm font-semibold text-brand uppercase tracking-wide mb-3">
-              {ui.whoCanApply[lang]}
-            </h3>
+          <div className="px-6 py-5">
+            <SectionHeader label={ui.whoCanApply[lang]} color="text-brand" />
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
@@ -74,18 +110,23 @@ function DetailCard({ appType, lang, checkedItems, onToggleAction }: DetailCardP
           </div>
         )}
 
-        {/* Target Timeline */}
-        <InfoBlock label={ui.targetTimeline[lang]} value={appType.targetTimeline[lang]} />
+        {/* Timeline + filing facts row */}
+        <div className="px-6 py-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <InfoBlock variant="blue"    label={ui.targetTimeline[lang]}      value={appType.targetTimeline[lang]} />
+          {appType.countrySpecificInfo[lang] && (
+            <InfoBlock variant="amber" label={ui.countrySpecificInfo[lang]} value={appType.countrySpecificInfo[lang]} />
+          )}
+          <InfoBlock variant="emerald" label={ui.canFileConcurrently[lang]} value={appType.canFileConcurrently[lang]} tooltip={ui.canFileConcurrentlyTooltip[lang]} />
+          <InfoBlock variant="orange"  label={ui.commonWaivers[lang]}       value={appType.commonWaivers[lang]}       tooltip={ui.commonWaiversTooltip[lang]} />
+        </div>
 
         {/* Steps */}
-        <div>
-          <h3 className="text-sm font-semibold text-brand uppercase tracking-wide mb-3">
-            {ui.steps[lang]}
-          </h3>
+        <div className="px-6 py-5 bg-gray-50">
+          <SectionHeader label={ui.steps[lang]} color="text-brand" />
           <ol className="space-y-2">
             {appType.steps.map((step, i) => (
               <li key={i} className="flex gap-3 text-sm text-gray-700">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-light text-brand font-bold text-xs flex items-center justify-center mt-0.5">
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-white border border-brand text-brand font-bold text-xs flex items-center justify-center mt-0.5 shadow-sm">
                   {i + 1}
                 </span>
                 <span className="leading-relaxed">{step[lang].replace(/^Step \d+: /, '').replace(/^Paso \d+: /, '').replace(/^Шаг \d+: /, '')}</span>
@@ -94,11 +135,9 @@ function DetailCard({ appType, lang, checkedItems, onToggleAction }: DetailCardP
           </ol>
         </div>
 
-        {/* Action Items — interactive checkbox list */}
-        <div>
-          <h3 className="text-sm font-semibold text-brand uppercase tracking-wide mb-3">
-            {ui.actionItems[lang]}
-          </h3>
+        {/* Action Items */}
+        <div className="px-6 py-5">
+          <SectionHeader label={ui.actionItems[lang]} color="text-brand" />
           <ul className="space-y-2.5">
             {appType.actionItems.map((item, i) => {
               const checked = checkedItems[i] ?? false
@@ -111,11 +150,7 @@ function DetailCard({ appType, lang, checkedItems, onToggleAction }: DetailCardP
                       onChange={() => onToggleAction(i)}
                       className="flex-shrink-0 mt-0.5 h-4 w-4 rounded border-gray-400 accent-brand cursor-pointer"
                     />
-                    <span
-                      className={`text-sm leading-relaxed transition-colors ${
-                        checked ? 'line-through text-gray-400' : 'text-gray-700'
-                      }`}
-                    >
+                    <span className={`text-sm leading-relaxed transition-colors ${checked ? 'line-through text-gray-400' : 'text-gray-700'}`}>
                       {item[lang]}
                     </span>
                   </label>
@@ -125,26 +160,45 @@ function DetailCard({ appType, lang, checkedItems, onToggleAction }: DetailCardP
           </ul>
         </div>
 
-        {/* Country-Specific Info */}
-        {appType.countrySpecificInfo[lang] && (
-          <InfoBlock label={ui.countrySpecificInfo[lang]} value={appType.countrySpecificInfo[lang]} />
-        )}
-
-        {/* Can File Concurrently */}
-        <InfoBlock label={ui.canFileConcurrently[lang]} value={appType.canFileConcurrently[lang]} />
-
-        {/* Common Waivers */}
-        <InfoBlock label={ui.commonWaivers[lang]} value={appType.commonWaivers[lang]} />
-
         {/* Prevention Tips */}
-        <div>
-          <h3 className="text-sm font-semibold text-brand uppercase tracking-wide mb-3">
-            {ui.preventionTips[lang]}
-          </h3>
+        <div className="px-6 py-5 bg-rose-50">
+          <SectionHeader label={ui.preventionTips[lang]} color="text-rose-700" />
           <ul className="space-y-2">
             {appType.preventionSuggestions.map((tip, i) => (
-              <li key={i} className="flex gap-2 text-sm text-gray-700">
-                <span className="flex-shrink-0 text-brand mt-1">•</span>
+              <li key={i} className="flex gap-2 text-sm text-rose-900">
+                <span className="flex-shrink-0 text-rose-400 mt-1 font-bold">!</span>
+                <span className="leading-relaxed">{tip[lang]}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Interview Preparation */}
+        <div className="px-6 py-5 bg-violet-50">
+          <SectionHeader label={ui.interviewPrep[lang]} color="text-violet-700" />
+          <ul className="space-y-3">
+            {appType.interviewPrep.map((tip, i) => (
+              <li key={i} className="flex gap-3 text-sm text-violet-900">
+                <span className="flex-shrink-0 w-5 h-5 rounded bg-violet-200 text-violet-700 font-bold text-xs flex items-center justify-center mt-0.5">
+                  {i + 1}
+                </span>
+                <span className="leading-relaxed">{tip[lang]}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Acceleration Tips */}
+        <div className="px-6 py-5 bg-emerald-50">
+          <SectionHeader label={ui.accelerationTips[lang]} color="text-emerald-700" />
+          <ul className="space-y-3">
+            {appType.accelerationTips.map((tip, i) => (
+              <li key={i} className="flex gap-2.5 text-sm text-emerald-900">
+                <span className="flex-shrink-0 text-emerald-500 mt-0.5">
+                  <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                  </svg>
+                </span>
                 <span className="leading-relaxed">{tip[lang]}</span>
               </li>
             ))}
@@ -153,14 +207,12 @@ function DetailCard({ appType, lang, checkedItems, onToggleAction }: DetailCardP
 
         {/* Communication Templates */}
         {appType.communicationTemplates.length > 0 && (
-          <div>
-            <h3 className="text-sm font-semibold text-brand uppercase tracking-wide mb-3">
-              {ui.communicationTemplates[lang]}
-            </h3>
+          <div className="px-6 py-5">
+            <SectionHeader label={ui.communicationTemplates[lang]} color="text-brand" />
             <div className="space-y-4">
               {appType.communicationTemplates.map((tmpl, i) => (
                 <div key={i} className="border border-gray-200 rounded-lg overflow-hidden">
-                  <div className="bg-gray-50 px-4 py-3 text-sm space-y-1">
+                  <div className="bg-gray-50 px-4 py-3 text-sm space-y-1 border-b border-gray-200">
                     <p>
                       <span className="font-semibold text-gray-700">{ui.recipient[lang]}:</span>{' '}
                       <span className="text-gray-600">{tmpl.recipient[lang]}</span>
@@ -178,6 +230,7 @@ function DetailCard({ appType, lang, checkedItems, onToggleAction }: DetailCardP
             </div>
           </div>
         )}
+
       </div>
     </section>
   )
