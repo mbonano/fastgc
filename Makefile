@@ -1,6 +1,6 @@
 .PHONY: up down logs
 
-up: setup
+up:
 	docker compose up -d
 
 down:
