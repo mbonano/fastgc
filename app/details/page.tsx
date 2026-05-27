@@ -54,14 +54,58 @@ function SectionHeader({ label, color }: { label: string; color: string }) {
   )
 }
 
+function CollapsibleSection({
+  label,
+  color,
+  bgColor,
+  defaultOpen = false,
+  showLabel,
+  hideLabel,
+  children,
+}: {
+  label: string
+  color: string
+  bgColor: string
+  defaultOpen?: boolean
+  showLabel: string
+  hideLabel: string
+  children: React.ReactNode
+}) {
+  const [open, setOpen] = useState(defaultOpen)
+  return (
+    <div className={bgColor}>
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className="w-full px-6 py-4 flex items-center justify-between text-left"
+        aria-expanded={open}
+      >
+        <h3 className={`text-xs font-semibold uppercase tracking-wide ${color}`}>{label}</h3>
+        <span className={`text-xs font-medium ${color} flex items-center gap-1`}>
+          {open ? hideLabel : showLabel}
+          <svg
+            className={`w-4 h-4 transition-transform ${open ? 'rotate-180' : ''}`}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+          </svg>
+        </span>
+      </button>
+      {open && <div className="px-6 pb-5">{children}</div>}
+    </div>
+  )
+}
+
 interface DetailCardProps {
   appType: ApplicationType
   lang: Lang
   checkedItems: boolean[]
   onToggleAction: (index: number) => void
+  showLabel: string
+  hideLabel: string
 }
 
-function DetailCard({ appType, lang, checkedItems, onToggleAction }: DetailCardProps) {
+function DetailCard({ appType, lang, checkedItems, onToggleAction, showLabel, hideLabel }: DetailCardProps) {
   return (
     <section className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
       {/* Card header */}
@@ -120,6 +164,21 @@ function DetailCard({ appType, lang, checkedItems, onToggleAction }: DetailCardP
           <InfoBlock variant="orange"  label={ui.commonWaivers[lang]}       value={appType.commonWaivers[lang]}       tooltip={ui.commonWaiversTooltip[lang]} />
         </div>
 
+        {/* Critical Warnings — always visible */}
+        {appType.criticalWarnings && appType.criticalWarnings.length > 0 && (
+          <div className="px-6 py-5 bg-red-50 border-l-4 border-red-500">
+            <SectionHeader label={ui.criticalWarnings[lang]} color="text-red-700" />
+            <ul className="space-y-3">
+              {appType.criticalWarnings.map((warn, i) => (
+                <li key={i} className="flex gap-3 text-sm text-red-900">
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-red-200 text-red-700 font-bold text-xs flex items-center justify-center mt-0.5">!</span>
+                  <span className="leading-relaxed">{warn[lang]}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         {/* Steps */}
         <div className="px-6 py-5 bg-gray-50">
           <SectionHeader label={ui.steps[lang]} color="text-brand" />
@@ -173,21 +232,6 @@ function DetailCard({ appType, lang, checkedItems, onToggleAction }: DetailCardP
           </ul>
         </div>
 
-        {/* Interview Preparation */}
-        <div className="px-6 py-5 bg-violet-50">
-          <SectionHeader label={ui.interviewPrep[lang]} color="text-violet-700" />
-          <ul className="space-y-3">
-            {appType.interviewPrep.map((tip, i) => (
-              <li key={i} className="flex gap-3 text-sm text-violet-900">
-                <span className="flex-shrink-0 w-5 h-5 rounded bg-violet-200 text-violet-700 font-bold text-xs flex items-center justify-center mt-0.5">
-                  {i + 1}
-                </span>
-                <span className="leading-relaxed">{tip[lang]}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
         {/* Acceleration Tips */}
         <div className="px-6 py-5 bg-emerald-50">
           <SectionHeader label={ui.accelerationTips[lang]} color="text-emerald-700" />
@@ -205,10 +249,37 @@ function DetailCard({ appType, lang, checkedItems, onToggleAction }: DetailCardP
           </ul>
         </div>
 
-        {/* Communication Templates */}
+        {/* Interview Preparation — collapsible, open by default */}
+        <CollapsibleSection
+          label={ui.interviewPrep[lang]}
+          color="text-violet-700"
+          bgColor="bg-violet-50"
+          defaultOpen={true}
+          showLabel={showLabel}
+          hideLabel={hideLabel}
+        >
+          <ul className="space-y-3">
+            {appType.interviewPrep.map((tip, i) => (
+              <li key={i} className="flex gap-3 text-sm text-violet-900">
+                <span className="flex-shrink-0 w-5 h-5 rounded bg-violet-200 text-violet-700 font-bold text-xs flex items-center justify-center mt-0.5">
+                  {i + 1}
+                </span>
+                <span className="leading-relaxed">{tip[lang]}</span>
+              </li>
+            ))}
+          </ul>
+        </CollapsibleSection>
+
+        {/* Communication Templates — collapsible, closed by default */}
         {appType.communicationTemplates.length > 0 && (
-          <div className="px-6 py-5">
-            <SectionHeader label={ui.communicationTemplates[lang]} color="text-brand" />
+          <CollapsibleSection
+            label={ui.communicationTemplates[lang]}
+            color="text-brand"
+            bgColor="bg-white"
+            defaultOpen={false}
+            showLabel={showLabel}
+            hideLabel={hideLabel}
+          >
             <div className="space-y-4">
               {appType.communicationTemplates.map((tmpl, i) => (
                 <div key={i} className="border border-gray-200 rounded-lg overflow-hidden">
@@ -228,7 +299,32 @@ function DetailCard({ appType, lang, checkedItems, onToggleAction }: DetailCardP
                 </div>
               ))}
             </div>
-          </div>
+          </CollapsibleSection>
+        )}
+
+        {/* What Comes Next — collapsible, closed by default */}
+        {appType.whatComesNext && appType.whatComesNext.length > 0 && (
+          <CollapsibleSection
+            label={ui.whatComesNext[lang]}
+            color="text-sky-700"
+            bgColor="bg-sky-50"
+            defaultOpen={false}
+            showLabel={showLabel}
+            hideLabel={hideLabel}
+          >
+            <ul className="space-y-3">
+              {appType.whatComesNext.map((item, i) => (
+                <li key={i} className="flex gap-3 text-sm text-sky-900">
+                  <span className="flex-shrink-0 text-sky-500 mt-0.5">
+                    <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  <span className="leading-relaxed">{item[lang]}</span>
+                </li>
+              ))}
+            </ul>
+          </CollapsibleSection>
         )}
 
       </div>
@@ -320,6 +416,8 @@ export default function DetailsPage() {
               lang={lang}
               checkedItems={checkedActions[appType.id] ?? Array(appType.actionItems.length).fill(false)}
               onToggleAction={(i) => toggleAction(appType.id, i, appType.actionItems.length)}
+              showLabel={ui.showSection[lang]}
+              hideLabel={ui.hideSection[lang]}
             />
           ))}
         </div>

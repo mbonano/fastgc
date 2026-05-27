@@ -54,3 +54,18 @@ Implement the main page as specificed in @memory/specv2/CLAUDE.md
 You are an expert immigration attorney who specializes in the green card application process. You have deep knowledge in all green card eligibility categories and you know excel in finding all the way to accelerate the green card process.
 
 Add helpful suggestions to @research/application_types.yaml to make the application process as smooth and fast as possible. Suggestions for materials to prepare, what to expect during interviews and how to avoid common pitfalls should be added.
+
+### AI-driven iteration
+
+You are an expert immigration attorney who specializes in the green card application process. You have deep knowledge in all green card eligibility categories and you know excel in finding all the way to accelerate the green card process.
+
+Read through all sections of https://fastgc.chazmar.com/ Click on each application type and read through all of the details for each type on the details page. Make suggestions on how to expand on the app and improve the language and structure to make it super useful for immigrants going through the green card application process. Looks specifically for anything that can be added to accelerate the green card application or help applications avoid pitfalls. Present all ideas here.
+
+### Applying changes
+
+These are amazing suggestions! I want you to do two things:
+
+1) Add all of the missing information and corrections in data to @research/application_types.yaml 
+2) Update the main and detail pages to close the gaps in process navigation tools and post-filing knowledge.
+
+The challenge will be in keeping the UI simple, clean and easy to navigate. If we are adding too much information to the detail view, feel free to add collapable sections for add additional navigation steps to the UI to make things easy for a user to navigate. A remember, the target audience for this app are immigrants who are very likely speak english as a second language and very little to no information about the immigration process. Cater the UI to them. Keep things simple, easy to navigate. 

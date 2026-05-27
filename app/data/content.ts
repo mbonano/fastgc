@@ -203,6 +203,26 @@ export const ui = {
     es: 'Quién puede solicitar',
     ru: 'Кто может подать заявку',
   },
+  criticalWarnings: {
+    en: 'Critical Warnings',
+    es: 'Advertencias Críticas',
+    ru: 'Критические предупреждения',
+  },
+  whatComesNext: {
+    en: 'What Comes Next',
+    es: 'Qué Viene Después',
+    ru: 'Что будет дальше',
+  },
+  showSection: {
+    en: 'Show',
+    es: 'Mostrar',
+    ru: 'Показать',
+  },
+  hideSection: {
+    en: 'Hide',
+    es: 'Ocultar',
+    ru: 'Скрыть',
+  },
 } satisfies Record<string, T>
 
 export const categories: AnyGroup[] = [
