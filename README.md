@@ -3,7 +3,7 @@ FastGC (Fast Green Card): An app for anyone who has or is going to apply for a g
 
 It is free, open source and written in language accessible to immigrants who know english as a second language. The xplanations are simple and straight forward.
 
-Try it out now: https://fastgc.chazmar.com/
+Try it out now: <a href="https://fastgc.chazmar.com/" target="_blank">fastgc.chazmar.com</a>
 
 ## Getting Started
 
