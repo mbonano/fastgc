@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 import Providers from './components/Providers'
 import Header from './components/Header'
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </Providers>
       </body>
+      <GoogleAnalytics gaId="G-SJRZ0FFKQ8" />
     </html>
   )
 }
