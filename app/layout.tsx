@@ -16,6 +16,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${geist.variable} h-full`}>
+      {/* Google tag (gtag.js) */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJRZ0FFKQ8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SJRZ0FFKQ8');
+      </script>
       <body className="min-h-full flex flex-col bg-surface antialiased">
         <Providers>
           <Header />
